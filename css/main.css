@@ -6524,21 +6524,37 @@ label.panel-block {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem; }
 
-nav.navbar span.lnr {
-  margin-right: .5rem; }
+a {
+  transition: all 300ms ease; }
 
-nav.navbar img {
+nav.navbar img.profile {
   border-radius: 50%;
   margin-right: .5rem; }
 
-nav.navbar button.button {
-  border: none;
-  height: auto; }
+nav.navbar a.underline span:last-child {
+  margin-left: .5rem; }
 
-nav.navbar div.dropdown-menu {
-  padding-top: 1rem; }
+section#character div.card-content p {
+  margin-bottom: 0; }
 
-#return {
+section#character .subtitle {
+  margin-top: -1.25rem; }
+
+section#character progress {
+  margin: auto;
+  max-width: 500px; }
+
+section#character div.download {
+  margin: 2rem; }
+  section#character div.download a.button {
+    margin: .25rem; }
+  section#character div.download span.icon {
+    margin: auto 0.2875em auto -0.1875em; }
+    @media (max-width: 768px) {
+      section#character div.download span.icon {
+        margin: auto 0; } }
+
+a#return {
   background: rgba(10, 10, 10, 0.7);
   border-radius: 50%;
   bottom: 20px;
@@ -6548,7 +6564,7 @@ nav.navbar div.dropdown-menu {
   right: 20px;
   width: 50px;
   z-index: 10; }
-  #return span {
+  a#return span {
     color: white;
     margin: 0;
     position: relative;
@@ -6556,10 +6572,10 @@ nav.navbar div.dropdown-menu {
     top: 14px;
     font-size: 20px;
     transition: all 300ms ease; }
-  #return:hover {
+  a#return:hover {
     background: rgba(10, 10, 10, 0.9); }
-    #return:hover span {
+    a#return:hover span {
       top: 10px; }
 
-.footer {
+footer.footer {
   padding-bottom: 3rem; }

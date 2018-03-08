@@ -1,25 +1,57 @@
+
+
+a {
+  transition: all 300ms ease;
+}
+
 nav.navbar {
 
-  span.lnr {
-    margin-right: .5rem;
-  }
-
-  img {
+  img.profile {
     border-radius: 50%;
     margin-right: .5rem;
   }
 
-  button.button {
-    border: none;
-    height: auto;
-  }
+  a.underline {
 
-  div.dropdown-menu {
-    padding-top: 1rem;
+    span:last-child {
+      margin-left: .5rem;
+    }
   }
 }
 
-#return {
+section#character {
+
+  div.card-content p {
+    margin-bottom: 0;
+  }
+
+  .subtitle {
+    margin-top: -1.25rem;
+  }
+
+  progress {
+    margin: auto;
+    max-width: 500px;
+  }
+
+  div.download {
+    margin: 2rem;
+
+    a.button {
+      margin: .25rem;
+    }
+
+    span.icon {
+      margin: auto 0.2875em auto -0.1875em;
+
+      @media (max-width: 768px) {
+        margin: auto 0;
+      }
+    }
+  }
+}
+
+a#return {
   background: transparentize($black,.3);
   border-radius: 50%;
   bottom: 20px;
@@ -49,6 +81,6 @@ nav.navbar {
   }
 }
 
-.footer {
+footer.footer {
   padding-bottom: 3rem;
 }

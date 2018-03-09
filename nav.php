@@ -1,10 +1,10 @@
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" href="#home">
+      <a class="navbar-item" href="index.php">
         <img src="noosphere.svg" alt="Noosphere">
       </a>
-      <a class="navbar-item underline" href="#about">
+      <a class="navbar-item underline" href="index.php">
         <span class="lnr-dagger"></span>
         <span class="is-hidden-touch">Character Builder</a>
       </a>

@@ -25,29 +25,23 @@
     <div class="container">
       <div class="columns">
         <div class="column is-10-desktop is-offset-1-desktop">
-
           <div class="columns">
-
             <div class="column is-9 content-box">
-              <h1 class="title">
-                <span class="lnr-dna"></span>
-                Race
+              <h1 class="title has-text-centered">
+                CHOOSE YOUR RACE
               </h1>
             </div>
-
             <div class="column is-3 content-home">
               <a class="button is-large">
-                <span>Go Back</span>
+                <span>GO BACK</span>
                 <span class="icon">
                   <i class="fas fa-angle-right"></i>
                 </span>
               </a>
             </div>
-
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -55,11 +49,110 @@
     <div class="container">
       <div class="columns">
         <div class="column is-10-desktop is-offset-1-desktop">
-
           <div class="columns">
 
             <div class="column is-9 content-box">
-
+              <div class="columns card-choice-container">
+                <div class="column is-4 card-choice">
+                  <label>
+                    <input type="radio" name="race" value="dwarf">
+                    <figure class="image is-square">
+                      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      <h1 class="title is-4 has-text-centered">Dwarf</h1>
+                    </figure>
+                  </label>
+                </div>
+                <div class="column is-4 card-choice">
+                  <label>
+                    <input type="radio" name="race" value="elf">
+                    <figure class="image is-square">
+                      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      <h1 class="title is-4 has-text-centered">Elf</h1>
+                    </figure>
+                  </label>
+                </div>
+                <div class="column is-4 card-choice">
+                  <label>
+                    <input type="radio" name="race" value="halfling">
+                    <figure class="image is-square">
+                      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      <h1 class="title is-4 has-text-centered">Halfling</h1>
+                    </figure>
+                  </label>
+                </div>
+                <div class="column is-4 card-choice">
+                  <label>
+                    <input type="radio" name="race" value="human">
+                    <figure class="image is-square">
+                      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      <h1 class="title is-4 has-text-centered">Human</h1>
+                    </figure>
+                  </label>
+                </div>
+                <div class="column is-4 card-choice">
+                  <label>
+                    <input type="radio" name="race" value="dragonborn">
+                    <figure class="image is-square">
+                      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      <h1 class="title is-4 has-text-centered">Dragonborn</h1>
+                    </figure>
+                  </label>
+                </div>
+                <div class="column is-4 card-choice">
+                  <label>
+                    <input type="radio" name="race" value="gnome">
+                    <figure class="image is-square">
+                      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      <h1 class="title is-4 has-text-centered">Gnome</h1>
+                    </figure>
+                  </label>
+                </div>
+                <div class="column is-4 card-choice">
+                  <label>
+                    <input type="radio" name="race" value="half-elf">
+                    <figure class="image is-square">
+                      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      <h1 class="title is-4 has-text-centered">Half-Elf</h1>
+                    </figure>
+                  </label>
+                </div>
+                <div class="column is-4 card-choice">
+                  <label>
+                    <input type="radio" name="race" value="half-orc">
+                    <figure class="image is-square">
+                      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      <h1 class="title is-4 has-text-centered">Half-Orc</h1>
+                    </figure>
+                  </label>
+                </div>
+                <div class="column is-4 card-choice">
+                  <label>
+                    <input type="radio" name="race" value="tiefling">
+                    <figure class="image is-square">
+                      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      <h1 class="title is-4 has-text-centered">Tiefling</h1>
+                    </figure>
+                  </label>
+                </div>
+              </div>
+              <div id="next" class="columns">
+                <div class="column is-8-desktop is-offset-2-desktop is-10-tablet is-offset-1-tablet">
+                  <div class="button-set has-text-centered">
+                    <a class="button is-light is-medium" href="#">
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-left"></i>
+                      </span>
+                      <span class="is-hidden-mobile">Back</span>
+                    </a>
+                    <a class="button is-light is-medium" href="subrace.php">
+                      <span class="is-hidden-mobile">Next</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-right"></i>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="column is-3 content-links">
@@ -68,7 +161,7 @@
                   <li class="is-active">
                     <a>
                       <span class="icon lnr-dna"></span>
-                      Race
+                      <span>Race</span>
                       <span class="lock">
                         <i class="fas fa-check"></i>
                       </span>
@@ -77,7 +170,7 @@
                   <li>
                     <a>
                       <span class="icon lnr-dagger"></span>
-                      Class
+                      <span>Class</span>
                       <span class="lock">
                         <i class="fas fa-check"></i>
                       </span>
@@ -85,8 +178,8 @@
                   </li>
                   <li>
                     <a>
-                      <span class="icon lnr-landscape"></span>
-                      Background
+                      <span class="icon lnr-briefcase"></span>
+                      <span>Background</span>
                       <span class="lock">
                         <i class="fas fa-check"></i>
                       </span>
@@ -95,7 +188,7 @@
                   <li>
                     <a>
                       <span class="icon lnr-hammer-wrench"></span>
-                      Skills
+                      <span>Skills</span>
                       <span class="lock">
                         <i class="fas fa-lock"></i>
                       </span>
@@ -104,7 +197,7 @@
                   <li>
                     <a>
                       <span class="icon lnr-chart-bars"></span>
-                      Attributes
+                      <span>Attributes</span>
                       <span class="lock">
                         <i class="fas fa-lock"></i>
                       </span>
@@ -113,7 +206,7 @@
                   <li>
                     <a>
                       <span class="icon lnr-heart-pulse"></span>
-                      Health
+                      <span>Health</span>
                       <span class="lock">
                         <i class="fas fa-lock"></i>
                       </span>
@@ -122,7 +215,7 @@
                   <li>
                     <a>
                       <span class="icon lnr-magic-wand"></span>
-                      Spells
+                      <span>Spells</span>
                       <span class="lock">
                         <i class="fas fa-lock"></i>
                       </span>
@@ -131,7 +224,7 @@
                   <li>
                     <a>
                       <span class="icon lnr-portrait"></span>
-                      Name
+                      <span>Name</span>
                       <span class="lock">
                         <i class="fas fa-lock"></i>
                       </span>
@@ -139,8 +232,8 @@
                   </li>
                   <li>
                     <a>
-                      <span class="icon lnr-bookmark"></span>
-                      Summary
+                      <span class="icon lnr-document"></span>
+                      <span>Summary</span>
                       <span class="lock">
                         <i class="fas fa-lock"></i>
                       </span>
@@ -149,11 +242,9 @@
                 </ul>
               </aside>
             </div>
-
           </div>
         </div>
       </div>
-
     </div>
 
   </div>

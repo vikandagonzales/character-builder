@@ -1,5 +1,3 @@
-
-
 a {
   transition: all 300ms ease;
 }
@@ -19,7 +17,7 @@ nav.navbar {
   }
 }
 
-section#character {
+section#character-cards {
 
   div.card-content p {
     margin-bottom: 0;
@@ -46,6 +44,99 @@ section#character {
 
       @media (max-width: 768px) {
         margin: auto 0;
+      }
+    }
+  }
+}
+
+section#character-options {
+
+  div#character-breadcrumbs {
+
+    div.hero-body {
+      padding-bottom: 1.25rem;
+    }
+
+    .breadcrumb li + li::before {
+      color: $grey-light;
+    }
+  }
+
+  div.content-box {
+    background-color: $white;
+  }
+
+  div#character-title {
+
+    div.content-box {
+      min-height: 100px;
+
+      h1 {
+        color: $secondary;
+        margin: 1rem .75rem;
+      }
+    }
+
+    div.content-home {
+      display: flex;
+      align-items: flex-end;
+
+      a.button {
+        background-color: transparent;
+        border: 0;
+        margin-bottom: .5rem;
+
+        &:hover {
+          color: $secondary;
+        }
+
+        span.icon {
+          font-size: 2rem;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  div#character-content {
+    padding-bottom: 5rem;
+
+    div.content-box {
+      min-height: 450px;
+    }
+
+    div.content-links {
+      margin-left: -5px;
+      padding-left: 0;
+      padding-top: 2rem;
+
+      li {
+        border-left: 5px solid lighten($secondary,10%);
+        transition: all 300ms ease;
+      }
+
+      li.is-active {
+        border-color: lighten($secondary,20%);
+
+        a {
+          background-color: transparentize($secondary,.7);
+          border-radius: 0 2px 2px 0;
+        }
+      }
+
+      a:hover {
+        background-color: transparent;
+        color: lighten($secondary,30%);
+      }
+
+      span.icon{
+        padding: .5rem;
+      }
+
+      span.lock {
+        color: $secondary;
+        font-size: .8rem;
+        padding-left: .5rem;
       }
     }
   }

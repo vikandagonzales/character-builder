@@ -2,7 +2,7 @@
 
 <?php include 'nav.php';?>
 
-<section id="character" class="hero is-medium is-dark is-bold">
+<section id="character-cards" class="hero is-medium is-dark is-bold">
   <div class="hero-body">
     <div class="container">
       <div class="columns">
@@ -29,9 +29,9 @@
             </a>
             <a class="button is-light is-medium" href="#">
               <span class="icon is-small">
-                <i class="fas fa-redo"></i>
+                <i class="fas fa-file"></i>
               </span>
-              <span class="is-hidden-mobile">Reset</span>
+              <span class="is-hidden-mobile">Start Over</span>
             </a>
           </div>
         </div>

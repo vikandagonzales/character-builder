@@ -6524,6 +6524,11 @@ nav.navbar {
   nav.navbar a.underline span:last-child {
     margin-left: .5rem; }
 
+section#character-cards div.card {
+  transition: all 300ms ease; }
+  section#character-cards div.card:hover {
+    transform: scale(1.02); }
+
 section#character-cards div.card-content p {
   margin-bottom: 0; }
 
@@ -6569,7 +6574,7 @@ section#character-options div#character-content {
   section#character-options div#character-content div.content-box {
     min-height: 450px;
     padding: 1.5rem 2.5rem; }
-    section#character-options div#character-content div.content-box div#next div.button-set {
+    section#character-options div#character-content div.content-box div#arrows div.button-set {
       padding-bottom: 1rem; }
     section#character-options div#character-content div.content-box div.card-choice-container {
       display: flex;
@@ -6608,6 +6613,8 @@ section#character-options div#character-content {
           section#character-options div#character-content div.content-box div.card-choice-container div.card-choice label > input:checked + figure img {
             box-shadow: 0 0 8px rgba(10, 10, 10, 0.2);
             opacity: 1; }
+    section#character-options div#character-content div.content-box div.hide {
+      display: none; }
   section#character-options div#character-content div.content-links {
     margin-left: -3px;
     padding-left: 0;

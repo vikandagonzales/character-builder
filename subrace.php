@@ -52,32 +52,23 @@
           <div class="columns">
             <div class="column is-9 content-box">
 
-              <div id="character-race">
+              <div id="character-subrace" class="hide">
                 <div class="columns card-choice-container">
-                  <div class="column is-4 card-choice">
+                  <div class="column is-5 card-choice">
                     <label>
-                      <input type="radio" name="race" value="dwarf">
+                      <input type="radio" name="subrace" value="hill">
                       <figure class="image is-square">
                         <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                        <h1 class="title is-4 has-text-centered">Dwarf</h1>
+                        <h1 class="title is-4 has-text-centered">Hill</h1>
                       </figure>
                     </label>
                   </div>
-                  <div class="column is-4 card-choice">
+                  <div class="column is-5 card-choice">
                     <label>
-                      <input type="radio" name="race" value="elf">
+                      <input type="radio" name="subrace" value="mountain">
                       <figure class="image is-square">
                         <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                        <h1 class="title is-4 has-text-centered">Elf</h1>
-                      </figure>
-                    </label>
-                  </div>
-                  <div class="column is-4 card-choice">
-                    <label>
-                      <input type="radio" name="race" value="human">
-                      <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                        <h1 class="title is-4 has-text-centered">Human</h1>
+                        <h1 class="title is-4 has-text-centered">Mountain</h1>
                       </figure>
                     </label>
                   </div>

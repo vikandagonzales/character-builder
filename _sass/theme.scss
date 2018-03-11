@@ -37,6 +37,14 @@ nav.navbar {
 
 section#character-cards {
 
+  div.card {
+    transition: all 300ms ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
   div.card-content p {
     margin-bottom: 0;
   }
@@ -109,7 +117,7 @@ section#character-options {
       min-height: 450px;
       padding: 1.5rem 2.5rem;
 
-      div#next {
+      div#arrows {
 
         div.button-set {
           padding-bottom: 1rem;
@@ -173,6 +181,10 @@ section#character-options {
             }
           }
         }
+      }
+
+      div.hide {
+        display: none;
       }
     }
 

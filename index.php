@@ -39,7 +39,7 @@
 
       <div class="columns">
         <div class="column is-4">
-          <a href="race.php">
+          <a href="character.php">
             <div class="card">
               <div class="card-image">
                 <figure class="image is-2by1">
@@ -92,7 +92,7 @@
             <div class="card-content">
               <div class="content is-clearfix">
                 <p class="is-pulled-left">
-                  <span class="lnr-landscape"></span>
+                  <span class="lnr-file-search"></span>
                   Background
                 </p>
                 <p class="is-pulled-right">

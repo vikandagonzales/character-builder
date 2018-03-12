@@ -12,7 +12,8 @@
               <ul>
                 <li><a>Home</a></li>
                 <li><a href="index.php">Character Builder</a></li>
-                <li class="is-active"><a aria-current="page">Race</a></li>
+                <li><a href="race.php">Race</a></li>
+                <li class="is-active"><a aria-current="page">Subrace</a></li>
               </ul>
             </nav>
           </div>
@@ -28,7 +29,7 @@
           <div class="columns">
             <div class="column is-9 content-box">
               <h1 class="title has-text-centered">
-                CHOOSE YOUR RACE
+                CHOOSE YOUR SUBRACE
               </h1>
             </div>
             <div class="column is-3 content-home">
@@ -52,7 +53,7 @@
           <div class="columns">
             <div class="column is-9 content-box">
 
-              <div id="character-subrace" class="hide">
+              <div id="character-subrace">
                 <div class="columns card-choice-container">
                   <div class="column is-5 card-choice">
                     <label>

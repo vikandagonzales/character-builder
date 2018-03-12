@@ -82,6 +82,11 @@
                     </label>
                   </div>
                 </div>
+                <article id="error" class="message is-danger hide">
+                  <div class="message-body">
+                    Please select a race.
+                  </div>
+                </article>
               </div>
 
               <?php include 'arrows.php';?>

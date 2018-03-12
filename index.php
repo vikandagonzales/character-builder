@@ -39,7 +39,7 @@
 
       <div class="columns">
         <div class="column is-4">
-          <a href="character.php">
+          <a href="race.php">
             <div class="card">
               <div class="card-image">
                 <figure class="image is-2by1">

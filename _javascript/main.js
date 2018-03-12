@@ -55,89 +55,70 @@ $(function() {
 
 // ===== Character Option Pages =====
 
-
 var arrows = document.querySelector('#arrows');
 var back = document.querySelector('#back');
 var next = document.querySelector('#next');
+var error = document.querySelector('#error');
+var inputs = document.querySelectorAll('input');
 
-var race = document.querySelector('#character-race');
-var subrace = document.querySelector('#character-subrace');
+var navRace = document.querySelector('#nav-race');
+var navClass = document.querySelector('#nav-class');
+var navBackground = document.querySelector('#nav-background');
+var navSkills = document.querySelector('#nav-skills');
+var navAttributes = document.querySelector('#nav-attributes');
+var navHealth = document.querySelector('#nav-health');
+var navSpells = document.querySelector('#nav-spells');
+var navName = document.querySelector('#nav-name');
+var navSummary = document.querySelector('#nav-summary');
 
+var selected;
 
 document.addEventListener('DOMContentLoaded', function () {
 
-// data-visibility how to access DOM
-// next button add is-primary for clickable, add is-muted or something for not. add and remove classes
-// fade in and out using jquery instead of adding hide and show classes.
-// base next button on whether an option was selected or not.
-// breadcrumbs
-// navigation is-active class on current active window, lock and check based on localstorage
-// selections on localstorage
+// lock and check based on localstorage
 
 // RACE - race
 
-  if (race.style === 'display: block') {
+  if (document.querySelector('#character-race') !== null) {
+    if (JSON.parse(localStorage.getItem('race')) !== null) {
+      selected = JSON.parse(localStorage.getItem('race'));
+      for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].value === selected) {
+          inputs[i].checked = true;
+        }
+      }
+    }
     back.classList.remove('is-primary');
     back.classList.remove('is-outlined');
     back.classList.add('is-static');
-    next.addEventListener('click', function() {
-      race.dataset.visibility = 'hide';
-      $('#character-race').hide();
-      subrace.dataset.visibility = 'show';
-      $('#character-subrace').fadeIn(200);
+    navRace.classList.add('is-active');
+    next.addEventListener('click', function () {
+      if (document.querySelector('input[name=race]:checked') === null) {
+        $('#error').fadeIn();
+      } else {
+        next.href = 'subrace.php';
+        localStorage.setItem('race', JSON.stringify(document.querySelector('input[name=race]:checked').value))
+      }
     });
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener('click', function () {
+        $('#error').fadeOut();
+      });
+    }
   }
 
 // RACE - subrace
 
-  if (subrace.style === 'display: block') {
-    back.classList.add('is-primary');
-    back.classList.add('is-outlined');
-    back.classList.remove('is-static');
-    back.addEventListener('click', function() {
-      race.dataset.visibility = 'show';
-      $('#character-race').fadeIn(200);
-      subrace.dataset.visibility = 'hide';
-      $('#character-subrace').hide();
-    });
+  if (document.querySelector('#character-subrace') !== null) {
+    back.href = 'race.php';
+    next.href = 'level.php';
+    navRace.classList.add('is-active');
   }
-
 
 });
 
-
-    /*
-    back.classList.remove('is-primary');
-    back.classList.remove('is-outlined');
-    back.classList.add('is-static');
-    next.addEventListener('click', function() {
-      race.dataset.visibility === 'hide';
-      subrace.dataset.visibility === 'show';
-    });
-  }
-
-  $('#next').click(function () {
-    $('#character-race').hide();
-    $('#character-subrace').fadeIn(500);
-  });
-
-  if (subrace.dataset.visibility === 'show') {
-    back.className = '';
-    back.addEventListener('click', function() {
-      race.className = '';
-      subrace.className = 'hide';
-    });
-    next.addEventListener('click', function() {
-      subrace.className = 'hide';
-      level.className = '';
-    })
-  }
-
-  */
-
 /*
 required alert when nothing is selected if user tries to hit 'next'
-
 
 race - race
 if dwarf or elf, next should go to the subrace ID;

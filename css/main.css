@@ -6508,6 +6508,9 @@ a {
   color: #79549c;
   transition: all 300ms ease; }
 
+.hide {
+  display: none; }
+
 div.button-set {
   padding: 2rem; }
   div.button-set a.button {
@@ -6613,8 +6616,6 @@ section#character-options div#character-content {
           section#character-options div#character-content div.content-box div.card-choice-container div.card-choice label > input:checked + figure img {
             box-shadow: 0 0 8px rgba(10, 10, 10, 0.2);
             opacity: 1; }
-    section#character-options div#character-content div.content-box div.hide {
-      display: none; }
   section#character-options div#character-content div.content-links {
     margin-left: -3px;
     padding-left: 0;

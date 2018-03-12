@@ -6577,8 +6577,13 @@ section#character-options div#character-content {
   section#character-options div#character-content div.content-box {
     min-height: 450px;
     padding: 1.5rem 2.5rem; }
+    section#character-options div#character-content div.content-box article#error {
+      margin-top: 2rem; }
     section#character-options div#character-content div.content-box div#arrows div.button-set {
       padding-bottom: 1rem; }
+    section#character-options div#character-content div.content-box div#arrows #next.is-static {
+      cursor: help;
+      pointer-events: auto; }
     section#character-options div#character-content div.content-box div.card-choice-container {
       display: flex;
       flex-wrap: wrap;
@@ -6586,6 +6591,8 @@ section#character-options div#character-content {
       section#character-options div#character-content div.content-box div.card-choice-container div.card-choice {
         display: block;
         position: relative; }
+        section#character-options div#character-content div.content-box div.card-choice-container div.card-choice.hide {
+          display: none; }
         section#character-options div#character-content div.content-box div.card-choice-container div.card-choice label {
           cursor: pointer;
           display: block;
@@ -6637,6 +6644,7 @@ section#character-options div#character-content {
       padding: .5rem; }
     section#character-options div#character-content div.content-links span.lock {
       color: #79549c;
+      display: none;
       font-size: .8rem;
       padding-left: .5rem; }
 

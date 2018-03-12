@@ -12,8 +12,8 @@
               <ul>
                 <li><a>Home</a></li>
                 <li><a href="index.php">Character Builder</a></li>
-                <li><a href="race.php">RACE</a></li>
-                <li class="is-active"><a aria-current="page">Race</a></li>
+                <li><a href="index.php">CLASS</a></li>
+                <li class="is-active"><a aria-current="page">Level</a></li>
               </ul>
             </nav>
           </div>
@@ -29,7 +29,7 @@
           <div class="columns">
             <div class="column is-9 content-box">
               <h1 class="title has-text-centered">
-                CHOOSE YOUR RACE
+                WHAT'S YOUR LEVEL?
               </h1>
             </div>
             <div class="column is-3 content-home">
@@ -53,35 +53,9 @@
           <div class="columns">
             <div class="column is-9 content-box">
 
-              <div id="character-race">
+              <div id="character-level">
                 <div class="columns card-choice-container">
-                  <div class="column is-4 card-choice">
-                    <label>
-                      <input type="radio" name="race" value="dwarf">
-                      <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                        <h1 class="title is-4 has-text-centered">Dwarf</h1>
-                      </figure>
-                    </label>
-                  </div>
-                  <div class="column is-4 card-choice">
-                    <label>
-                      <input type="radio" name="race" value="elf">
-                      <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                        <h1 class="title is-4 has-text-centered">Elf</h1>
-                      </figure>
-                    </label>
-                  </div>
-                  <div class="column is-4 card-choice">
-                    <label>
-                      <input type="radio" name="race" value="human">
-                      <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                        <h1 class="title is-4 has-text-centered">Human</h1>
-                      </figure>
-                    </label>
-                  </div>
+
                 </div>
                 <article id="error" class="message is-danger hide">
                   <div class="message-body">

@@ -12,7 +12,7 @@
               <ul>
                 <li><a>Home</a></li>
                 <li><a href="index.php">Character Builder</a></li>
-                <li><a href="race.php">Race</a></li>
+                <li><a href="race.php">RACE</a></li>
                 <li class="is-active"><a aria-current="page">Subrace</a></li>
               </ul>
             </nav>
@@ -55,7 +55,7 @@
 
               <div id="character-subrace">
                 <div class="columns card-choice-container">
-                  <div class="column is-5 card-choice">
+                  <div class="column is-5 card-choice hide" data-subrace="hill">
                     <label>
                       <input type="radio" name="subrace" value="hill">
                       <figure class="image is-square">
@@ -64,7 +64,7 @@
                       </figure>
                     </label>
                   </div>
-                  <div class="column is-5 card-choice">
+                  <div class="column is-5 card-choice hide" data-subrace="mountain">
                     <label>
                       <input type="radio" name="subrace" value="mountain">
                       <figure class="image is-square">
@@ -73,7 +73,30 @@
                       </figure>
                     </label>
                   </div>
+                  <div class="column is-5 card-choice hide" data-subrace="high">
+                    <label>
+                      <input type="radio" name="subrace" value="high">
+                      <figure class="image is-square">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <h1 class="title is-4 has-text-centered">High</h1>
+                      </figure>
+                    </label>
+                  </div>
+                  <div class="column is-5 card-choice hide" data-subrace="wood">
+                    <label>
+                      <input type="radio" name="subrace" value="wood">
+                      <figure class="image is-square">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <h1 class="title is-4 has-text-centered">Wood</h1>
+                      </figure>
+                    </label>
+                  </div>
                 </div>
+                <article id="error" class="message is-danger hide">
+                  <div class="message-body">
+                    Please select a subrace.
+                  </div>
+                </article>
               </div>
 
               <?php include 'arrows.php';?>

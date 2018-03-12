@@ -121,10 +121,19 @@ section#character-options {
       min-height: 450px;
       padding: 1.5rem 2.5rem;
 
+      article#error {
+        margin-top: 2rem;
+      }
+
       div#arrows {
 
         div.button-set {
           padding-bottom: 1rem;
+        }
+
+        #next.is-static {
+          cursor: help;
+          pointer-events: auto;
         }
       }
 
@@ -136,6 +145,10 @@ section#character-options {
         div.card-choice {
           display: block;
           position: relative;
+
+          &.hide {
+            display: none;
+          }
 
           label {
             cursor: pointer;
@@ -222,6 +235,7 @@ section#character-options {
 
       span.lock {
         color: $secondary;
+        display: none;
         font-size: .8rem;
         padding-left: .5rem;
       }

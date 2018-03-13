@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', function () {
           inputs[i].checked = true;
         }
       }
-      next.href = 'skills.php';
+      next.href = 'skill.php';
       nextArrow ();
     }
     next.addEventListener('click', function () {
@@ -444,7 +444,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('background', JSON.stringify(document.querySelector('input[name=background]:checked').value));
         $('#error').fadeOut();
         sidenav ();
-        next.href = 'skills.php'
+        next.href = 'skill.php'
         nextArrow ();
       });
     }

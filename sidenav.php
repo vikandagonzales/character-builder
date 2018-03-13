@@ -65,7 +65,7 @@
         </a>
       </li>
       <li id="nav-proficiencies">
-        <a>
+        <a href="skill.php">
           <span class="icon lnr-hammer-wrench"></span>
           <span>Proficiencies</span>
           <span class="lock" data-id="times">

@@ -11,9 +11,6 @@
           <span class="lock" data-id="check">
             <i class="fas fa-check"></i>
           </span>
-          <span class="lock" data-id="lock">
-            <i class="fas fa-lock"></i>
-          </span>
         </a>
       </li>
       <li id="nav-level">
@@ -26,12 +23,9 @@
           <span class="lock" data-id="check">
             <i class="fas fa-check"></i>
           </span>
-          <span class="lock" data-id="lock">
-            <i class="fas fa-lock"></i>
-          </span>
         </a>
       </li>
-      <li id="nav-class">
+      <li id="nav-class" class="disable">
         <a href="class.php">
           <span class="icon lnr-dagger"></span>
           <span>Class</span>
@@ -56,13 +50,10 @@
           <span class="lock" data-id="check">
             <i class="fas fa-check"></i>
           </span>
-          <span class="lock" data-id="lock">
-            <i class="fas fa-lock"></i>
-          </span>
         </a>
       </li>
       <li id="nav-background">
-        <a>
+        <a href="background.php">
           <span class="icon lnr-file-search"></span>
           <span>Background</span>
           <span class="lock" data-id="times">
@@ -70,9 +61,6 @@
           </span>
           <span class="lock" data-id="check">
             <i class="fas fa-check"></i>
-          </span>
-          <span class="lock" data-id="lock">
-            <i class="fas fa-lock"></i>
           </span>
         </a>
       </li>
@@ -106,21 +94,6 @@
           </span>
         </a>
       </li>
-      <li id="nav-feats">
-        <a>
-          <span class="icon lnr-equalizer"></span>
-          <span>Feats</span>
-          <span class="lock" data-id="times">
-            <i class="fas fa-times"></i>
-          </span>
-          <span class="lock" data-id="check">
-            <i class="fas fa-check"></i>
-          </span>
-          <span class="lock" data-id="lock">
-            <i class="fas fa-lock"></i>
-          </span>
-        </a>
-      </li>
       <li id="nav-health">
         <a>
           <span class="icon lnr-heart-pulse"></span>
@@ -136,7 +109,22 @@
           </span>
         </a>
       </li>
-      <li id="nav-spells">
+      <li id="nav-feats" class="disable">
+        <a>
+          <span class="icon lnr-equalizer"></span>
+          <span>Feats</span>
+          <span class="lock" data-id="times">
+            <i class="fas fa-times"></i>
+          </span>
+          <span class="lock" data-id="check">
+            <i class="fas fa-check"></i>
+          </span>
+          <span class="lock" data-id="lock">
+            <i class="fas fa-lock"></i>
+          </span>
+        </a>
+      </li>
+      <li id="nav-spells" class="disable">
         <a>
           <span class="icon lnr-magic-wand"></span>
           <span>Spells</span>

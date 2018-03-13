@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (JSON.parse(localStorage.getItem('level')) !== null) {
       $('#nav-level span[data-id=times]').hide();
       $('#nav-level span[data-id=check]').fadeIn();
+      $('#nav-class').removeClass('disable');
       if (JSON.parse(localStorage.getItem('class')) !== null && JSON.parse(localStorage.getItem('subclass')) !== null) {
         $('#nav-class span[data-id=times]').hide();
         $('#nav-class span[data-id=check]').fadeIn();
@@ -91,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
       $('#nav-class span[data-id=times]').hide();
       $('#nav-class span[data-id=check]').hide();
       $('#nav-class span[data-id=lock]').fadeIn();
+      $('#nav-class').addClass('disable');
     }
     if (JSON.parse(localStorage.getItem('alignment')) !== null) {
       $('#nav-alignment span[data-id=times]').hide();
@@ -98,6 +100,13 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       $('#nav-alignment span[data-id=times]').fadeIn();
       $('#nav-alignment span[data-id=check]').hide();
+    }
+    if (JSON.parse(localStorage.getItem('background')) !== null) {
+      $('#nav-background span[data-id=times]').hide();
+      $('#nav-background span[data-id=check]').fadeIn();
+    } else {
+      $('#nav-background span[data-id=times]').fadeIn();
+      $('#nav-background span[data-id=check]').hide();
     }
   }
 
@@ -216,7 +225,10 @@ document.addEventListener('DOMContentLoaded', function () {
       if (parseInt(JSON.parse(localStorage.getItem('level'))) >= 3 && JSON.parse(localStorage.getItem('subclass')) === 'n/a') {
         localStorage.removeItem('subclass');
       }
+      $('#error').fadeOut();
       sidenav ();
+      next.href = 'class.php';
+      nextArrow ();
     });
     document.querySelector('#character-level input').addEventListener('keydown', function (event) {
       event.preventDefault();
@@ -282,6 +294,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
       if (parseInt(JSON.parse(localStorage.getItem('level'))) < 3) {
+        localStorage.setItem('subclass', JSON.stringify('n/a'));
         next.href = 'alignment.php';
       } else {
         next.href = 'subclass.php';
@@ -369,10 +382,14 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('#nav-alignment').classList.add('is-active');
     $('#back').removeClass('hide');
     $('#next').removeClass('hide');
-    if (parseInt(JSON.parse(localStorage.getItem('level'))) >= 3) {
-      back.href = 'subclass.php';
+    if (JSON.parse(localStorage.getItem('level')) === null) {
+      back.href = 'level.php';
     } else {
-      back.href = 'class.php';
+      if (parseInt(JSON.parse(localStorage.getItem('level'))) >= 3 && JSON.parse(localStorage.getItem('class')) !== null) {
+        back.href = 'subclass.php';
+      } else {
+        back.href = 'class.php';
+      }
     }
     if (JSON.parse(localStorage.getItem('alignment')) !== null) {
       selected = JSON.parse(localStorage.getItem('alignment'));
@@ -400,6 +417,39 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+// BACKGROUND
+
+  if (document.querySelector('#character-background') !== null) {
+    document.querySelector('#nav-background').classList.add('is-active');
+    $('#back').removeClass('hide');
+    $('#next').removeClass('hide');
+    back.href = 'alignment.php'
+    if (JSON.parse(localStorage.getItem('background')) !== null) {
+      selected = JSON.parse(localStorage.getItem('background'));
+      for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].value === selected) {
+          inputs[i].checked = true;
+        }
+      }
+      next.href = 'skills.php';
+      nextArrow ();
+    }
+    next.addEventListener('click', function () {
+      if (JSON.parse(localStorage.getItem('background')) === null) {
+        $('#error').fadeIn();
+      }
+    });
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener('click', function () {
+        localStorage.setItem('background', JSON.stringify(document.querySelector('input[name=background]:checked').value));
+        $('#error').fadeOut();
+        sidenav ();
+        next.href = 'skills.php'
+        nextArrow ();
+      });
+    }
+  }
+
 // if locked, can't access, disable link.
 // progress & locks on homepage.
 // back button if locked...
@@ -407,10 +457,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /*
-
-background - background
-next goes to background - alignment
-back goes to subclass if that has been selected. if not, back to class.
 
 background - alignment
 next goes to skills - skill proficiencies

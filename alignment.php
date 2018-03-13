@@ -138,7 +138,7 @@
                 </div>
                 <article id="error" class="message is-danger hide">
                   <div class="message-body">
-                    Please select a race.
+                    Please select an alignment.
                   </div>
                 </article>
               </div>

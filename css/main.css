@@ -6511,6 +6511,9 @@ a {
 .hide {
   display: none; }
 
+.disable {
+  pointer-events: none; }
+
 div.button-set {
   padding: 2rem; }
   div.button-set a.button {
@@ -6644,6 +6647,8 @@ section#character-options div#character-content {
         section#character-options div#character-content div.content-links li.is-active a {
           background-color: rgba(121, 84, 156, 0.3);
           border-radius: 0 2px 2px 0; }
+      section#character-options div#character-content div.content-links li#nav-feats, section#character-options div#character-content div.content-links li#nav-spells {
+        color: #79549c; }
     section#character-options div#character-content div.content-links a:hover {
       background-color: transparent;
       color: #c5b3d6; }

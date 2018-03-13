@@ -7,6 +7,10 @@ a {
   display: none;
 }
 
+.disable {
+  pointer-events: none;
+}
+
 div.button-set {
   padding: 2rem;
 
@@ -45,7 +49,7 @@ section#character-cards {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   div.card {
     transition: all 300ms ease;
 
@@ -231,6 +235,10 @@ section#character-options {
             background-color: transparentize($secondary,.7);
             border-radius: 0 2px 2px 0;
           }
+        }
+
+        &#nav-feats, &#nav-spells {
+          color: $secondary;
         }
       }
 

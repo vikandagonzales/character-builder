@@ -57,7 +57,7 @@
                   <div class="column is-4 card-choice">
                     <div class="field">
                       <div class="control">
-                        <input class="input is-large" placeholder="1">
+                        <input class="input is-large" type="number" min="1" max="20" placeholder="1">
                       </div>
                     </div>
                   </div>

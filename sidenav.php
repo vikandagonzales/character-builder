@@ -47,7 +47,7 @@
         </a>
       </li>
       <li id="nav-alignment">
-        <a>
+        <a href="alignment.php">
           <span class="icon lnr-theater"></span>
           <span>Alignment</span>
           <span class="lock" data-id="times">

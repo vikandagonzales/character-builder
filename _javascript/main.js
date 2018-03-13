@@ -73,12 +73,25 @@ document.addEventListener('DOMContentLoaded', function () {
       $('#nav-race span[data-id=times]').fadeIn();
       $('#nav-race span[data-id=check]').hide();
     }
+    if (JSON.parse(localStorage.getItem('level')) !== null && JSON.parse(localStorage.getItem('class')) !== null) {
+      $('#nav-class span[data-id=times]').hide();
+      $('#nav-class span[data-id=check]').fadeIn();
+    } else {
+      $('#nav-class span[data-id=times]').fadeIn();
+      $('#nav-class span[data-id=check]').hide();
+    }
   }
 
   function nextArrow () {
     next.classList.remove('is-static');
     next.classList.add('is-primary');
     next.classList.add('is-outlined');
+  }
+
+  function nextArrowRemove () {
+    next.classList.add('is-static');
+    next.classList.remove('is-primary');
+    next.classList.remove('is-outlined');
   }
 
   sidenav ();
@@ -94,11 +107,16 @@ document.addEventListener('DOMContentLoaded', function () {
           inputs[i].checked = true;
         }
       }
+      if (JSON.parse(localStorage.getItem('subrace')) === 'n/a') {
+        next.href = 'level.php';
+      } else {
+        next.href = 'subrace.php';
+      }
       nextArrow ();
     }
     document.querySelector('#nav-race').classList.add('is-active');
     next.addEventListener('click', function () {
-      if (document.querySelector('input[name=race]:checked') === null) {
+      if (JSON.parse(localStorage.getItem('race')) === null) {
         $('#error').fadeIn();
       }
     });
@@ -113,8 +131,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         localStorage.setItem('race', JSON.stringify(document.querySelector('input[name=race]:checked').value));
         $('#error').fadeOut();
-        nextArrow ();
         sidenav ();
+        nextArrow ();
       });
     }
   }
@@ -135,7 +153,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('div[data-subrace=wood]').classList.remove('hide');
         break;
       default:
-
     }
     if (JSON.parse(localStorage.getItem('subrace')) !== null) {
       selected = JSON.parse(localStorage.getItem('subrace'));
@@ -144,11 +161,12 @@ document.addEventListener('DOMContentLoaded', function () {
           inputs[i].checked = true;
         }
       }
+      next.href = 'level.php';
       nextArrow ();
     }
     document.querySelector('#nav-race').classList.add('is-active');
     next.addEventListener('click', function () {
-      if (document.querySelector('input[name=subrace]:checked') === null) {
+      if (JSON.parse(localStorage.getItem('subrace')) === null) {
         $('#error').fadeIn();
       }
     });
@@ -156,13 +174,67 @@ document.addEventListener('DOMContentLoaded', function () {
       inputs[i].addEventListener('click', function () {
         localStorage.setItem('subrace', JSON.stringify(document.querySelector('input[name=subrace]:checked').value));
         $('#error').fadeOut();
-        nextArrow ();
         sidenav ();
         next.href = 'level.php';
+        nextArrow ();
       });
     }
   }
 
+// CLASS - level
+
+  if (document.querySelector('#character-level') !== null) {
+    $('#back').removeClass('hide');
+    $('#next').removeClass('hide');
+    if (JSON.parse(localStorage.getItem('subrace')) === 'n/a' || JSON.parse(localStorage.getItem('subrace')) === null) {
+      back.href = 'race.php';
+    } else {
+      back.href = 'subrace.php';
+    }
+    document.querySelector('#character-level input').addEventListener('keydown', function (event) {
+      event.preventDefault();
+      if (event.keyCode === 8 || event.keyCode === 46) {
+        document.querySelector('#character-level input').value = document.querySelector('#character-level input').value.slice(0, -1);
+      }
+      if (document.querySelector('#character-level input').value === '') {
+        if (/[1-9]/.test(event.key)) {
+          document.querySelector('#character-level input').value += event.key;
+        }
+      } else if (/^1$/.test(document.querySelector('#character-level input').value)) {
+        if (/[0-9]/.test(event.key)) {
+          document.querySelector('#character-level input').value += event.key;
+        }
+      } else if (/^2$/.test(document.querySelector('#character-level input').value)) {
+        if (/0/.test(event.key)) {
+          document.querySelector('#character-level input').value += event.key;
+        }
+      }
+      if (document.querySelector('#character-level input').value === '') {
+        localStorage.removeItem('level');
+        next.removeAttribute('href');
+        nextArrowRemove ();
+      } else {
+        localStorage.setItem('level', JSON.stringify(document.querySelector('#character-level input').value));
+        $('#error').fadeOut();
+        //sidenav ();
+        next.href = 'class.php';
+        nextArrow ();
+      }
+    });
+    if (JSON.parse(localStorage.getItem('level')) !== null) {
+      document.querySelector('#character-level input').value = JSON.parse(localStorage.getItem('level'));
+      next.href = 'class.php';
+      nextArrow ();
+    }
+    document.querySelector('#nav-class').classList.add('is-active');
+    next.addEventListener('click', function () {
+      if (JSON.parse(localStorage.getItem('level')) === null) {
+        $('#error').fadeIn();
+      }
+    });
+  }
+
+// CLASS - class
 
 
 });

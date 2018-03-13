@@ -17,7 +17,7 @@
         </a>
       </li>
       <li id="nav-class">
-        <a>
+        <a href="level.php">
           <span class="icon lnr-dagger"></span>
           <span>Class</span>
           <span class="lock" data-id="times">

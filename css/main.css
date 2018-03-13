@@ -6623,6 +6623,9 @@ section#character-options div#character-content {
           section#character-options div#character-content div.content-box div.card-choice-container div.card-choice label > input:checked + figure img {
             box-shadow: 0 0 8px rgba(10, 10, 10, 0.2);
             opacity: 1; }
+    section#character-options div#character-content div.content-box div#character-level input {
+      font-size: 5rem;
+      text-align: center; }
   section#character-options div#character-content div.content-links {
     margin-left: -3px;
     padding-left: 0;

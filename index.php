@@ -62,24 +62,26 @@
         </div>
 
         <div class="column is-4">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-2by1">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="content is-clearfix">
-                <p class="is-pulled-left">
-                  <span class="lnr-dagger"></span>
-                  Class
-                </p>
-                <p class="is-pulled-right">
-                  0 / 2
-                </p>
+          <a href="level.php">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content is-clearfix">
+                  <p class="is-pulled-left">
+                    <span class="lnr-dagger"></span>
+                    Class
+                  </p>
+                  <p class="is-pulled-right">
+                    0 / 2
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <div class="column is-4">

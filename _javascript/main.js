@@ -458,10 +458,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /*
 
-background - alignment
-next goes to skills - skill proficiencies
-back goes to background - background
-
 skills - skill proficiencies
 next goes to expertise if applicable, if not, skip to tool proficiencies, if applicable. if not, skip to languages.
 back goes to alignment
@@ -493,10 +489,6 @@ back goes to attributes - method
 health - roll / standard
 next goes to spells if applicable, if not skip to name
 back goes to health - choices
-
-////////spells
-next goes to name
-back goes to health - method
 
 name
 next goes to summary

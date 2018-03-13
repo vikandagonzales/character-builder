@@ -64,10 +64,10 @@
           </span>
         </a>
       </li>
-      <li id="nav-skills">
+      <li id="nav-proficiencies">
         <a>
           <span class="icon lnr-hammer-wrench"></span>
-          <span>Skills</span>
+          <span>Proficiencies</span>
           <span class="lock" data-id="times">
             <i class="fas fa-times"></i>
           </span>
@@ -94,10 +94,10 @@
           </span>
         </a>
       </li>
-      <li id="nav-health">
+      <li id="nav-hp">
         <a>
           <span class="icon lnr-heart-pulse"></span>
-          <span>Health</span>
+          <span>Hit Points</span>
           <span class="lock" data-id="times">
             <i class="fas fa-times"></i>
           </span>

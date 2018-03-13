@@ -73,12 +73,12 @@ document.addEventListener('DOMContentLoaded', function () {
       $('#nav-race span[data-id=times]').fadeIn();
       $('#nav-race span[data-id=check]').hide();
     }
-    if (JSON.parse(localStorage.getItem('level')) !== null && JSON.parse(localStorage.getItem('class')) !== null) {
-      $('#nav-class span[data-id=times]').hide();
-      $('#nav-class span[data-id=check]').fadeIn();
+    if (JSON.parse(localStorage.getItem('level')) !== null) {
+      $('#nav-level span[data-id=times]').hide();
+      $('#nav-level span[data-id=check]').fadeIn();
     } else {
-      $('#nav-class span[data-id=times]').fadeIn();
-      $('#nav-class span[data-id=check]').hide();
+      $('#nav-level span[data-id=times]').fadeIn();
+      $('#nav-level span[data-id=check]').hide();
     }
   }
 
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   sidenav ();
 
-// RACE - race
+// RACE
 
   if (document.querySelector('#character-race') !== null) {
     $('#next').removeClass('hide');
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-// RACE - subrace
+// RACE > Subrace
 
   if (document.querySelector('#character-subrace') !== null) {
     $('#back').removeClass('hide');
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-// CLASS - level
+// LEVEL
 
   if (document.querySelector('#character-level') !== null) {
     $('#back').removeClass('hide');
@@ -211,12 +211,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       if (document.querySelector('#character-level input').value === '') {
         localStorage.removeItem('level');
+        sidenav ();
         next.removeAttribute('href');
         nextArrowRemove ();
       } else {
         localStorage.setItem('level', JSON.stringify(document.querySelector('#character-level input').value));
         $('#error').fadeOut();
-        //sidenav ();
+        sidenav ();
         next.href = 'class.php';
         nextArrow ();
       }
@@ -226,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
       next.href = 'class.php';
       nextArrow ();
     }
-    document.querySelector('#nav-class').classList.add('is-active');
+    document.querySelector('#nav-level').classList.add('is-active');
     next.addEventListener('click', function () {
       if (JSON.parse(localStorage.getItem('level')) === null) {
         $('#error').fadeIn();
@@ -234,7 +235,51 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-// CLASS - class
+// CLASS
+
+/*
+  if (document.querySelector('#character-subrace') !== null) {
+    $('#back').removeClass('hide');
+    $('#next').removeClass('hide');
+    back.href = 'race.php';
+    switch (JSON.parse(localStorage.getItem('race'))) {
+      case 'dwarf':
+        document.querySelector('div[data-subrace=hill]').classList.remove('hide');
+        document.querySelector('div[data-subrace=mountain]').classList.remove('hide');
+        break;
+      case 'elf':
+        document.querySelector('div[data-subrace=high]').classList.remove('hide');
+        document.querySelector('div[data-subrace=wood]').classList.remove('hide');
+        break;
+      default:
+    }
+    if (JSON.parse(localStorage.getItem('subrace')) !== null) {
+      selected = JSON.parse(localStorage.getItem('subrace'));
+      for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].value === selected) {
+          inputs[i].checked = true;
+        }
+      }
+      next.href = 'level.php';
+      nextArrow ();
+    }
+    document.querySelector('#nav-race').classList.add('is-active');
+    next.addEventListener('click', function () {
+      if (JSON.parse(localStorage.getItem('subrace')) === null) {
+        $('#error').fadeIn();
+      }
+    });
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener('click', function () {
+        localStorage.setItem('subrace', JSON.stringify(document.querySelector('input[name=subrace]:checked').value));
+        $('#error').fadeOut();
+        sidenav ();
+        next.href = 'level.php';
+        nextArrow ();
+      });
+    }
+  }
+*/
 
 
 });

@@ -12,7 +12,6 @@
               <ul>
                 <li><a>Home</a></li>
                 <li><a href="index.php">Character Builder</a></li>
-                <li><a href="race.php">RACE</a></li>
                 <li class="is-active"><a aria-current="page">Race</a></li>
               </ul>
             </nav>

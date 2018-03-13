@@ -12,7 +12,6 @@
               <ul>
                 <li><a>Home</a></li>
                 <li><a href="index.php">Character Builder</a></li>
-                <li><a href="index.php">CLASS</a></li>
                 <li class="is-active"><a aria-current="page">Level</a></li>
               </ul>
             </nav>

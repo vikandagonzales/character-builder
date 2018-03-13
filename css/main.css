@@ -6527,6 +6527,10 @@ nav.navbar {
   nav.navbar a.underline span:last-child {
     margin-left: .5rem; }
 
+section#character-cards div.columns {
+  display: flex;
+  flex-wrap: wrap; }
+
 section#character-cards div.card {
   transition: all 300ms ease; }
   section#character-cards div.card:hover {

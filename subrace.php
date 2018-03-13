@@ -12,7 +12,7 @@
               <ul>
                 <li><a>Home</a></li>
                 <li><a href="index.php">Character Builder</a></li>
-                <li><a href="race.php">RACE</a></li>
+                <li><a href="race.php">Race</a></li>
                 <li class="is-active"><a aria-current="page">Subrace</a></li>
               </ul>
             </nav>

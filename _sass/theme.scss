@@ -41,6 +41,11 @@ nav.navbar {
 
 section#character-cards {
 
+  div.columns {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
   div.card {
     transition: all 300ms ease;
 

@@ -76,9 +76,21 @@ document.addEventListener('DOMContentLoaded', function () {
     if (JSON.parse(localStorage.getItem('level')) !== null) {
       $('#nav-level span[data-id=times]').hide();
       $('#nav-level span[data-id=check]').fadeIn();
+      if (JSON.parse(localStorage.getItem('class')) !== null) {
+        $('#nav-class span[data-id=times]').hide();
+        $('#nav-class span[data-id=check]').fadeIn();
+        $('#nav-class span[data-id=lock]').hide();
+      } else {
+        $('#nav-class span[data-id=times]').fadeIn();
+        $('#nav-class span[data-id=check]').hide();
+        $('#nav-class span[data-id=lock]').hide();
+      }
     } else {
       $('#nav-level span[data-id=times]').fadeIn();
       $('#nav-level span[data-id=check]').hide();
+      $('#nav-class span[data-id=times]').hide();
+      $('#nav-class span[data-id=check]').hide();
+      $('#nav-class span[data-id=lock]').fadeIn();
     }
   }
 
@@ -99,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // RACE
 
   if (document.querySelector('#character-race') !== null) {
+    document.querySelector('#nav-race').classList.add('is-active');
     $('#next').removeClass('hide');
     if (JSON.parse(localStorage.getItem('race')) !== null) {
       selected = JSON.parse(localStorage.getItem('race'));
@@ -114,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       nextArrow ();
     }
-    document.querySelector('#nav-race').classList.add('is-active');
     next.addEventListener('click', function () {
       if (JSON.parse(localStorage.getItem('race')) === null) {
         $('#error').fadeIn();
@@ -140,6 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // RACE > Subrace
 
   if (document.querySelector('#character-subrace') !== null) {
+    document.querySelector('#nav-race').classList.add('is-active');
     $('#back').removeClass('hide');
     $('#next').removeClass('hide');
     back.href = 'race.php';
@@ -164,7 +177,6 @@ document.addEventListener('DOMContentLoaded', function () {
       next.href = 'level.php';
       nextArrow ();
     }
-    document.querySelector('#nav-race').classList.add('is-active');
     next.addEventListener('click', function () {
       if (JSON.parse(localStorage.getItem('subrace')) === null) {
         $('#error').fadeIn();
@@ -184,6 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // LEVEL
 
   if (document.querySelector('#character-level') !== null) {
+    document.querySelector('#nav-level').classList.add('is-active');
     $('#back').removeClass('hide');
     $('#next').removeClass('hide');
     if (JSON.parse(localStorage.getItem('subrace')) === 'n/a' || JSON.parse(localStorage.getItem('subrace')) === null) {
@@ -227,7 +240,6 @@ document.addEventListener('DOMContentLoaded', function () {
       next.href = 'class.php';
       nextArrow ();
     }
-    document.querySelector('#nav-level').classList.add('is-active');
     next.addEventListener('click', function () {
       if (JSON.parse(localStorage.getItem('level')) === null) {
         $('#error').fadeIn();
@@ -237,67 +249,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // CLASS
 
-/*
-  if (document.querySelector('#character-subrace') !== null) {
+  if (document.querySelector('#character-class') !== null) {
+    document.querySelector('#nav-class').classList.add('is-active');
     $('#back').removeClass('hide');
     $('#next').removeClass('hide');
-    back.href = 'race.php';
-    switch (JSON.parse(localStorage.getItem('race'))) {
-      case 'dwarf':
-        document.querySelector('div[data-subrace=hill]').classList.remove('hide');
-        document.querySelector('div[data-subrace=mountain]').classList.remove('hide');
-        break;
-      case 'elf':
-        document.querySelector('div[data-subrace=high]').classList.remove('hide');
-        document.querySelector('div[data-subrace=wood]').classList.remove('hide');
-        break;
-      default:
-    }
-    if (JSON.parse(localStorage.getItem('subrace')) !== null) {
-      selected = JSON.parse(localStorage.getItem('subrace'));
+    back.href = 'level.php';
+    if (JSON.parse(localStorage.getItem('class')) !== null) {
+      selected = JSON.parse(localStorage.getItem('class'));
       for (var i = 0; i < inputs.length; i++) {
         if (inputs[i].value === selected) {
           inputs[i].checked = true;
         }
       }
-      next.href = 'level.php';
+      next.href = 'subclass.php';
       nextArrow ();
     }
-    document.querySelector('#nav-race').classList.add('is-active');
     next.addEventListener('click', function () {
-      if (JSON.parse(localStorage.getItem('subrace')) === null) {
+      if (JSON.parse(localStorage.getItem('class')) === null) {
         $('#error').fadeIn();
       }
     });
     for (var i = 0; i < inputs.length; i++) {
       inputs[i].addEventListener('click', function () {
-        localStorage.setItem('subrace', JSON.stringify(document.querySelector('input[name=subrace]:checked').value));
+        localStorage.setItem('class', JSON.stringify(document.querySelector('input[name=class]:checked').value));
         $('#error').fadeOut();
         sidenav ();
-        next.href = 'level.php';
+        next.href = 'subclass.php';
         nextArrow ();
       });
     }
   }
-*/
 
+// conditional depending on level
 
 });
 
 /*
-required alert when nothing is selected if user tries to hit 'next'
-
-race - race
-if dwarf or elf, next should go to the subrace ID;
-if human, next should go straight to class page.
-
-race - subrace
-next goes to class page
-back goes to race.
-
-class - level
-next goes to class
-back goes to subrace page if subrace was selected. if not, back to race.
 
 class - class
 next goes to subclass if level >= 3, if not, skip to background.

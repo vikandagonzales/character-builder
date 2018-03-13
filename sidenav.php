@@ -32,7 +32,7 @@
         </a>
       </li>
       <li id="nav-class">
-        <a href="level.php">
+        <a href="class.php">
           <span class="icon lnr-dagger"></span>
           <span>Class</span>
           <span class="lock" data-id="times">

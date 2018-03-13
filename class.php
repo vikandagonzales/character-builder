@@ -56,28 +56,28 @@
                 <div class="columns card-choice-container">
                   <div class="column is-4 card-choice">
                     <label>
-                      <input type="radio" name="race" value="dwarf">
+                      <input type="radio" name="class" value="druid">
                       <figure class="image is-square">
                         <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                        <h1 class="title is-4 has-text-centered">Dwarf</h1>
+                        <h1 class="title is-4 has-text-centered">Druid</h1>
                       </figure>
                     </label>
                   </div>
                   <div class="column is-4 card-choice">
                     <label>
-                      <input type="radio" name="race" value="elf">
+                      <input type="radio" name="class" value="paladin">
                       <figure class="image is-square">
                         <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                        <h1 class="title is-4 has-text-centered">Elf</h1>
+                        <h1 class="title is-4 has-text-centered">Paladin</h1>
                       </figure>
                     </label>
                   </div>
                   <div class="column is-4 card-choice">
                     <label>
-                      <input type="radio" name="race" value="human">
+                      <input type="radio" name="class" value="rogue">
                       <figure class="image is-square">
                         <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                        <h1 class="title is-4 has-text-centered">Human</h1>
+                        <h1 class="title is-4 has-text-centered">Rogue</h1>
                       </figure>
                     </label>
                   </div>

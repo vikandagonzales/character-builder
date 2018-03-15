@@ -662,11 +662,11 @@ document.addEventListener('DOMContentLoaded', function () {
     back.href = 'skill.php';
     switch (JSON.parse(localStorage.getItem('class'))) {
       case 'druid':
-        document.querySelector('#skill-addition').classList.remove('hide');
-        if (document.querySelector('#skill-given').innerHTML === '') {
-          document.querySelector('#skill-given').innerHTML = 1;
+        document.querySelector('#tool-addition').classList.remove('hide');
+        if (document.querySelector('#tool-given').innerHTML === '') {
+          document.querySelector('#tool-given').innerHTML = 1;
         } else {
-          document.querySelector('#skill-given').innerHTML = parseInt(document.querySelector('#skill-given').innerHTML) + 1;
+          document.querySelector('#tool-given').innerHTML = parseInt(document.querySelector('#tool-given').innerHTML) + 1;
         }
         document.querySelector('div[data-tool=herbalism-kit]').classList.remove('hide');
         document.querySelector('#herbalism-kit').classList.add('has-background-color');
@@ -675,11 +675,11 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('#herbalism-kit').checked = 'checked';
         break;
       case 'rogue':
-        document.querySelector('#skill-addition').classList.remove('hide');
-        if (document.querySelector('#skill-given').innerHTML === '') {
-          document.querySelector('#skill-given').innerHTML = 1;
+        document.querySelector('#tool-addition').classList.remove('hide');
+        if (document.querySelector('#tool-given').innerHTML === '') {
+          document.querySelector('#tool-given').innerHTML = 1;
         } else {
-          document.querySelector('#skill-given').innerHTML = parseInt(document.querySelector('#skill-given').innerHTML) + 1;
+          document.querySelector('#tool-given').innerHTML = parseInt(document.querySelector('#tool-given').innerHTML) + 1;
         }
         document.querySelector('div[data-tool=thieves-tools]').classList.remove('hide');
         document.querySelector('#thieves-tools').classList.add('has-background-color');
@@ -691,11 +691,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     switch (JSON.parse(localStorage.getItem('background'))) {
       case 'charlatan':
-        document.querySelector('#skill-addition').classList.remove('hide');
-        if (document.querySelector('#skill-given').innerHTML === '') {
-          document.querySelector('#skill-given').innerHTML = 2;
+        document.querySelector('#tool-addition').classList.remove('hide');
+        if (document.querySelector('#tool-given').innerHTML === '') {
+          document.querySelector('#tool-given').innerHTML = 2;
         } else {
-          document.querySelector('#skill-given').innerHTML = parseInt(document.querySelector('#skill-given').innerHTML) + 2;
+          document.querySelector('#tool-given').innerHTML = parseInt(document.querySelector('#tool-given').innerHTML) + 2;
         }
         document.querySelector('div[data-tool=disguise-kit]').classList.remove('hide');
         document.querySelector('#disguise-kit').classList.add('has-background-color');
@@ -709,24 +709,24 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('#forgery-kit').checked = 'checked';
         break;
       case 'criminal':
-        document.querySelector('#skill-addition').classList.remove('hide');
-        if (document.querySelector('#skill-given').innerHTML === '') {
-          document.querySelector('#skill-given').innerHTML = 1;
+        document.querySelector('#tool-addition').classList.remove('hide');
+        if (document.querySelector('#tool-given').innerHTML === '') {
+          document.querySelector('#tool-given').innerHTML = 1;
         } else {
-          document.querySelector('#skill-given').innerHTML = parseInt(document.querySelector('#skill-given').innerHTML) + 1;
+          document.querySelector('#tool-given').innerHTML = parseInt(document.querySelector('#tool-given').innerHTML) + 1;
         }
         document.querySelector('div[data-tool=thieves-tools]').classList.remove('hide');
         document.querySelector('#thieves-tools').classList.add('has-background-color');
         document.querySelector('#thieves-tools').classList.add('is-primary');
         document.querySelector('#thieves-tools').disabled = true;
         document.querySelector('#thieves-tools').checked = 'checked';
-        document.querySelector('#skill-extras').classList.remove('hide');
-        document.querySelector('#skill-gaming').classList.remove('hide');
-        if (document.querySelector('#skill-gaming-number').innerHTML === '') {
-          document.querySelector('#skill-gaming-number').innerHTML = 1;
+        document.querySelector('#tool-extras').classList.remove('hide');
+        document.querySelector('#tool-gaming').classList.remove('hide');
+        if (document.querySelector('#tool-gaming-number').innerHTML === '') {
+          document.querySelector('#tool-gaming-number').innerHTML = 1;
         } else {
-          document.querySelector('#skill-gaming-number').innerHTML = parseInt(document.querySelector('#skill-gaming-number').innerHTML) + 1;
-          document.querySelector('#skill-gaming .plural').classList.remove('hide');
+          document.querySelector('#tool-gaming-number').innerHTML = parseInt(document.querySelector('#tool-gaming-number').innerHTML) + 1;
+          document.querySelector('#tool-gaming .plural').classList.remove('hide');
         }
         document.querySelector('#header-gaming').classList.remove('hide');
         document.querySelector('div[data-tool=dice-set]').classList.remove('hide');
@@ -738,13 +738,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     switch (JSON.parse(localStorage.getItem('race'))) {
       case 'dwarf':
-        document.querySelector('#skill-extras').classList.remove('hide');
-        document.querySelector('#skill-artisan').classList.remove('hide');
-        if (document.querySelector('#skill-artisan-number').innerHTML === '') {
-          document.querySelector('#skill-artisan-number').innerHTML = 1;
+        document.querySelector('#tool-extras').classList.remove('hide');
+        document.querySelector('#tool-artisan').classList.remove('hide');
+        if (document.querySelector('#tool-artisan-number').innerHTML === '') {
+          document.querySelector('#tool-artisan-number').innerHTML = 1;
         } else {
-          document.querySelector('#skill-artisan-number').innerHTML = parseInt(document.querySelector('#skill-artisan-number').innerHTML) + 1;
-          document.querySelector('#skill-artisan .plural').classList.remove('hide');
+          document.querySelector('#tool-artisan-number').innerHTML = parseInt(document.querySelector('#tool-artisan-number').innerHTML) + 1;
+          document.querySelector('#tool-artisan .plural').classList.remove('hide');
         }
         document.querySelector('#header-artisan').classList.remove('hide');
         document.querySelector('div[data-tool=smiths-tools]').classList.remove('hide');
@@ -753,14 +753,16 @@ document.addEventListener('DOMContentLoaded', function () {
         break;
       default:
     }
-    if ((document.querySelector('#skill-artisan-number').innerHTML !== '' && document.querySelector('#skill-gaming-number').innerHTML !== '' && document.querySelector('#skill-music-number').innerHTML === '') || (document.querySelector('#skill-artisan-number').innerHTML !== '' && document.querySelector('#skill-gaming-number').innerHTML === '' && document.querySelector('#skill-music-number').innerHTML !== '')) {
-      document.querySelectorAll('#skill-extras .and')[0].classList.remove('hide');
-    } else if (document.querySelector('#skill-artisan-number').innerHTML === '' && document.querySelector('#skill-gaming-number').innerHTML !== '' && document.querySelector('#skill-music-number').innerHTML !== '') {
-      document.querySelectorAll('#skill-extras .and')[1].classList.remove('hide');
-    } else if (document.querySelector('#skill-artisan-number').innerHTML !== '' && document.querySelector('#skill-gaming-number').innerHTML !== '' && document.querySelector('#skill-music-number').innerHTML !== '') {
-      document.querySelectorAll('#skill-extras .comma')[0].classList.remove('hide');
-      document.querySelectorAll('#skill-extras .comma')[1].classList.remove('hide');
-      document.querySelectorAll('#skill-extras .and')[1].classList.remove('hide');
+    if ((document.querySelector('#tool-artisan-number').innerHTML !== '' && document.querySelector('#tool-gaming-number').innerHTML !== '' && document.querySelector('#tool-music-number').innerHTML === '') || (document.querySelector('#tool-artisan-number').innerHTML !== '' && document.querySelector('#tool-gaming-number').innerHTML === '' && document.querySelector('#tool-music-number').innerHTML !== '')) {
+      document.querySelectorAll('#tool-extras .and')[0].classList.remove('hide');
+    } else if (document.querySelector('#tool-artisan-number').innerHTML === '' && document.querySelector('#tool-gaming-number').innerHTML !== '' && document.querySelector('#tool-music-number').innerHTML !== '') {
+      document.querySelectorAll('#tool-extras .and')[1].classList.remove('hide');
+    } else if (document.querySelector('#tool-artisan-number').innerHTML !== '' && document.querySelector('#tool-gaming-number').innerHTML !== '' && document.querySelector('#tool-music-number').innerHTML !== '') {
+      document.querySelectorAll('#tool-extras .comma')[0].classList.remove('hide');
+      document.querySelectorAll('#tool-extras .comma')[1].classList.remove('hide');
+      document.querySelectorAll('#tool-extras .and')[1].classList.remove('hide');
+    } else if (document.querySelector('#tool-artisan-number').innerHTML === '' && document.querySelector('#tool-gaming-number').innerHTML === '' && document.querySelector('#tool-music-number').innerHTML === '') {
+      document.querySelector('#tool-none').classList.remove('hide');
     }
     $('#instructions').fadeIn();
     for (var i = 0; i < document.querySelectorAll('input[name=tool]:checked').length; i++) {
@@ -788,7 +790,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     localStorage.setItem('music', JSON.stringify(music));
-    if ((document.querySelector('#skill-artisan-number').innerHTML === '' || JSON.parse(localStorage.getItem('artisan')).length === parseInt(document.querySelector('#skill-artisan-number').innerHTML)) && (document.querySelector('#skill-gaming-number').innerHTML === '' || JSON.parse(localStorage.getItem('gaming')).length === parseInt(document.querySelector('#skill-gaming-number').innerHTML)) && (document.querySelector('#skill-music-number').innerHTML === '' || JSON.parse(localStorage.getItem('music')).length === parseInt(document.querySelector('#skill-music-number').innerHTML))) {
+    if ((document.querySelector('#tool-artisan-number').innerHTML === '' || JSON.parse(localStorage.getItem('artisan')).length === parseInt(document.querySelector('#tool-artisan-number').innerHTML)) && (document.querySelector('#tool-gaming-number').innerHTML === '' || JSON.parse(localStorage.getItem('gaming')).length === parseInt(document.querySelector('#tool-gaming-number').innerHTML)) && (document.querySelector('#tool-music-number').innerHTML === '' || JSON.parse(localStorage.getItem('music')).length === parseInt(document.querySelector('#tool-music-number').innerHTML))) {
       $('#error').fadeOut();
       sidenav ();
       if (JSON.parse(localStorage.getItem('class')) === 'rogue') {
@@ -803,18 +805,18 @@ document.addEventListener('DOMContentLoaded', function () {
       nextArrowRemove ();
     }
     next.addEventListener('click', function () {
-      if (document.querySelector('#skill-artisan-number').innerHTML !== '' && JSON.parse(localStorage.getItem('artisan')).length !== parseInt(document.querySelector('#skill-artisan-number').innerHTML)) {
+      if (document.querySelector('#tool-artisan-number').innerHTML !== '' && JSON.parse(localStorage.getItem('artisan')).length !== parseInt(document.querySelector('#tool-artisan-number').innerHTML)) {
         $('#error').fadeIn();
       }
-      if (document.querySelector('#skill-gaming-number').innerHTML !== '' && JSON.parse(localStorage.getItem('gaming')).length !== parseInt(document.querySelector('#skill-gaming-number').innerHTML)) {
+      if (document.querySelector('#tool-gaming-number').innerHTML !== '' && JSON.parse(localStorage.getItem('gaming')).length !== parseInt(document.querySelector('#tool-gaming-number').innerHTML)) {
         $('#error').fadeIn();
       }
-      if (document.querySelector('#skill-music-number').innerHTML !== '' && JSON.parse(localStorage.getItem('music')).length !== parseInt(document.querySelector('#skill-music-number').innerHTML)) {
+      if (document.querySelector('#tool-music-number').innerHTML !== '' && JSON.parse(localStorage.getItem('music')).length !== parseInt(document.querySelector('#tool-music-number').innerHTML)) {
         $('#error').fadeIn();
       }
     });
     $('input[name=artisan]').on('change', function (event) {
-      if ($('input[name=artisan]:checked').length > parseInt(document.querySelector('#skill-artisan-number').innerHTML)) {
+      if ($('input[name=artisan]:checked').length > parseInt(document.querySelector('#tool-artisan-number').innerHTML)) {
         event.target.checked = false;
       }
       if (event.target.checked) {
@@ -827,7 +829,7 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem('artisan', JSON.stringify(artisan));
     });
     $('input[name=gaming]').on('change', function (event) {
-      if ($('input[name=gaming]:checked').length > parseInt(document.querySelector('#skill-gaming-number').innerHTML)) {
+      if ($('input[name=gaming]:checked').length > parseInt(document.querySelector('#tool-gaming-number').innerHTML)) {
         event.target.checked = false;
       }
       if (event.target.checked) {
@@ -840,7 +842,7 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem('gaming', JSON.stringify(gaming));
     });
     $('input[name=music]').on('change', function (event) {
-      if ($('input[name=music]:checked').length > parseInt(document.querySelector('#skill-music-number').innerHTML)) {
+      if ($('input[name=music]:checked').length > parseInt(document.querySelector('#tool-music-number').innerHTML)) {
         event.target.checked = false;
       }
       if (event.target.checked) {
@@ -853,7 +855,7 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem('music', JSON.stringify(music));
     });
     $('input').on('change', function (event) {
-      if ((document.querySelector('#skill-artisan-number').innerHTML === '' || JSON.parse(localStorage.getItem('artisan')).length === parseInt(document.querySelector('#skill-artisan-number').innerHTML)) && (document.querySelector('#skill-gaming-number').innerHTML === '' || JSON.parse(localStorage.getItem('gaming')).length === parseInt(document.querySelector('#skill-gaming-number').innerHTML)) && (document.querySelector('#skill-music-number').innerHTML === '' || JSON.parse(localStorage.getItem('music')).length === parseInt(document.querySelector('#skill-music-number').innerHTML))) {
+      if ((document.querySelector('#tool-artisan-number').innerHTML === '' || JSON.parse(localStorage.getItem('artisan')).length === parseInt(document.querySelector('#tool-artisan-number').innerHTML)) && (document.querySelector('#tool-gaming-number').innerHTML === '' || JSON.parse(localStorage.getItem('gaming')).length === parseInt(document.querySelector('#tool-gaming-number').innerHTML)) && (document.querySelector('#tool-music-number').innerHTML === '' || JSON.parse(localStorage.getItem('music')).length === parseInt(document.querySelector('#tool-music-number').innerHTML))) {
         $('#error').fadeOut();
         sidenav ();
         if (JSON.parse(localStorage.getItem('class')) === 'rogue') {

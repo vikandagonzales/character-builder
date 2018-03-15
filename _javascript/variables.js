@@ -1,0 +1,21 @@
+var arrows = document.querySelector('#arrows');
+var back = document.querySelector('#back');
+var next = document.querySelector('#next');
+var error = document.querySelector('#error');
+var inputs = document.querySelectorAll('input');
+
+var selected;
+var skill = [];
+var skillLimit;
+var tool = [];
+var toolLimit;
+var artisan = [];
+var artisanLimit;
+var gaming = [];
+var gamingLimit;
+var music = [];
+var musicLimit;
+var expertise = [];
+var expertiseLimit;
+var language = [];
+var languageLimit;

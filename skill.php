@@ -55,7 +55,7 @@
               <div id="character-skill">
                 <article id="instructions" class="message is-primary hide">
                   <div class="message-body">
-                    <span id="skill-addition" class="hide">Your character choices thus far have granted you the following <span id="skill-given"></span> skill proficiencies</span>. Please select <span id="skill-number"></span> more.
+                    <span id="skill-addition" class="hide">Your character choices thus far grant you the following <span id="skill-given"></span> skill proficiencies</span>. Please select <span id="skill-number"></span> more.
                   </div>
                 </article>
                 <div class="columns">

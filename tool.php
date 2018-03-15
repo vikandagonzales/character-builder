@@ -55,7 +55,7 @@
               <div id="character-tool">
                 <article id="instructions" class="message is-primary hide">
                   <div class="message-body">
-                    <span id="tool-addition" class="hide">Your character choices have also granted you the following <span id="tool-given"></span> tool proficiencies.</span>
+                    <span id="tool-addition" class="hide">Your character choices also grant you the following <span id="tool-given"></span> tool proficiencies.</span>
                     <span id="tool-extras" class="hide">In addition, please select <span id="tool-artisan" class="hide"><span id="tool-artisan-number"></span> artisan's tool<span class="plural hide">s</span></span><span class="comma hide">, </span><span class="and hide"> and </span><span id="tool-gaming" class="hide"><span id="tool-gaming-number"></span> gaming set<span class="plural hide">s</span></span><span class="comma hide">, </span><span class="and hide"> and </span><span id="tool-music" class="hide"><span id="tool-music-number"></span> musical instrument<span class="plural hide">s</span></span>.</span>
                     <span id="tool-none" class="hide">You do not receive any tool proficiencies.</span>
                   </div>

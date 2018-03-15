@@ -218,7 +218,10 @@ section#character-options {
         text-align: center;
       }
 
-      div#character-skill, div#character-tool, div#character-expertise {
+      div#character-skill,
+      div#character-tool,
+      div#character-expertise,
+      div#character-language {
         color: $grey-darker;
 
         h1 {

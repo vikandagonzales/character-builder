@@ -79,10 +79,10 @@
           </span>
         </a>
       </li>
-      <li id="nav-attributes">
+      <li id="nav-abilities">
         <a>
           <span class="icon lnr-chart-bars"></span>
-          <span>Attributes</span>
+          <span>Abilities</span>
           <span class="lock" data-id="times">
             <i class="fas fa-times"></i>
           </span>

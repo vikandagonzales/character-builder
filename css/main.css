@@ -7336,6 +7336,8 @@ section#character-options div#character-content {
   section#character-options div#character-content div.content-box {
     min-height: 450px;
     padding: 1.5rem 2.5rem; }
+    section#character-options div#character-content div.content-box article#instructions {
+      margin-bottom: 2rem; }
     section#character-options div#character-content div.content-box article#error {
       margin-top: 2rem; }
     section#character-options div#character-content div.content-box div#arrows div.button-set {
@@ -7385,13 +7387,21 @@ section#character-options div#character-content {
     section#character-options div#character-content div.content-box div#character-level input {
       font-size: 5rem;
       text-align: center; }
-    section#character-options div#character-content div.content-box div#character-skill {
+    section#character-options div#character-content div.content-box div#character-skill, section#character-options div#character-content div.content-box div#character-tool {
       color: #363636; }
-      section#character-options div#character-content div.content-box div#character-skill .columns {
+      section#character-options div#character-content div.content-box div#character-skill h1, section#character-options div#character-content div.content-box div#character-tool h1 {
+        color: #79549c;
+        margin: 2rem 0; }
+        section#character-options div#character-content div.content-box div#character-skill h1 span, section#character-options div#character-content div.content-box div#character-tool h1 span {
+          font-weight: 400;
+          margin-right: .75rem; }
+      section#character-options div#character-content div.content-box div#character-skill .columns, section#character-options div#character-content div.content-box div#character-tool .columns {
         flex-wrap: wrap; }
-        section#character-options div#character-content div.content-box div#character-skill .columns .column {
+        section#character-options div#character-content div.content-box div#character-skill .columns .column, section#character-options div#character-content div.content-box div#character-tool .columns .column {
           padding: .5rem 1rem; }
-      section#character-options div#character-content div.content-box div#character-skill label {
+        section#character-options div#character-content div.content-box div#character-skill .columns .column.is-small, section#character-options div#character-content div.content-box div#character-tool .columns .column.is-small {
+          padding: .15rem 1rem; }
+      section#character-options div#character-content div.content-box div#character-skill label, section#character-options div#character-content div.content-box div#character-tool label {
         transition: all 300ms ease; }
   section#character-options div#character-content div.content-links {
     margin-left: -3px;

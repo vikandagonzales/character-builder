@@ -130,6 +130,10 @@ section#character-options {
       min-height: 450px;
       padding: 1.5rem 2.5rem;
 
+      article#instructions {
+        margin-bottom: 2rem;
+      }
+
       article#error {
         margin-top: 2rem;
       }
@@ -214,14 +218,28 @@ section#character-options {
         text-align: center;
       }
 
-      div#character-skill {
+      div#character-skill, div#character-tool {
         color: $grey-darker;
+
+        h1 {
+          color: $secondary;
+          margin: 2rem 0;
+
+          span {
+            font-weight: $weight-normal;
+            margin-right: .75rem;
+          }
+        }
 
         .columns {
           flex-wrap: wrap;
 
           .column {
             padding: .5rem 1rem;
+          }
+
+          .column.is-small {
+            padding: .15rem 1rem;
           }
         }
 

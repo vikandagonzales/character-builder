@@ -28,7 +28,7 @@
           <div class="columns">
             <div class="column is-9 content-box">
               <h1 class="title has-text-centered">
-                ENTER YOUR SKILL PROFICIENCIES
+                CHOOSE YOUR SKILL PROFICIENCIES
               </h1>
             </div>
             <div class="column is-3 content-home">

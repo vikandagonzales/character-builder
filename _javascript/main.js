@@ -628,8 +628,8 @@ document.addEventListener('DOMContentLoaded', function () {
         $('#error').fadeIn();
       }
     });
-    $('.is-checkradio').on('change', function (event) {
-      if ($('.is-checkradio:checked').length > parseInt(document.querySelector('#skill-number').innerHTML) + parseInt(document.querySelector('#skill-given').innerHTML)) {
+    $('input[name=skill]').on('change', function (event) {
+      if ($('input[name=skill]:checked').length > parseInt(document.querySelector('#skill-number').innerHTML) + parseInt(document.querySelector('#skill-given').innerHTML)) {
         event.target.checked = false;
       }
       if (event.target.checked) {
@@ -761,7 +761,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('#tool-extras .comma')[0].classList.remove('hide');
       document.querySelectorAll('#tool-extras .comma')[1].classList.remove('hide');
       document.querySelectorAll('#tool-extras .and')[1].classList.remove('hide');
-    } else if (document.querySelector('#tool-artisan-number').innerHTML === '' && document.querySelector('#tool-gaming-number').innerHTML === '' && document.querySelector('#tool-music-number').innerHTML === '') {
+    } else if (document.querySelector('#tool-given').innerHTML === '' && document.querySelector('#tool-artisan-number').innerHTML === '' && document.querySelector('#tool-gaming-number').innerHTML === '' && document.querySelector('#tool-music-number').innerHTML === '') {
       document.querySelector('#tool-none').classList.remove('hide');
     }
     $('#instructions').fadeIn();
@@ -871,6 +871,76 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // PROFICIENCIES > Expertise
+
+    if (document.querySelector('#character-expertise') !== null) {
+      document.querySelector('#nav-proficiencies').classList.add('is-active');
+      $('#back').removeClass('hide');
+      $('#next').removeClass('hide');
+      back.href = 'tool.php';
+      switch (JSON.parse(localStorage.getItem('class'))) {
+        case 'rogue':
+          if (parseInt(JSON.parse(localStorage.getItem('level'))) >= 6) {
+            document.querySelector('#expertise-number').innerHTML = '4';
+          } else {
+            document.querySelector('#expertise-number').innerHTML = '2';
+          }
+          for (var i = 0; i < document.querySelectorAll('[data-expertise]').length; i++) {
+            if ((JSON.parse(localStorage.getItem('skill'))).includes(document.querySelectorAll('[data-expertise]')[i].dataset.expertise) || (JSON.parse(localStorage.getItem('tool'))).includes(document.querySelectorAll('[data-expertise]')[i].dataset.expertise)) {
+              document.querySelectorAll('[data-expertise]')[i].classList.remove('hide');
+            }
+          }
+          break;
+        default:
+      }
+      $('#instructions').fadeIn();
+      expertise = JSON.parse(localStorage.getItem('expertise')) || [];
+      for (var i = 0; i < inputs.length; i++) {
+        if (expertise.indexOf(inputs[i].id) !== -1) {
+          inputs[i].checked = true;
+        }
+      }
+      localStorage.setItem('expertise', JSON.stringify(expertise));
+      if (JSON.parse(localStorage.getItem('expertise')).length === parseInt(document.querySelector('#expertise-number').innerHTML)) {
+        $('#error').fadeOut();
+        sidenav ();
+        next.href = 'language.php';
+        nextArrow ();
+      } else {
+        sidenav ();
+        next.removeAttribute('href');
+        nextArrowRemove ();
+      }
+      next.addEventListener('click', function () {
+        if (JSON.parse(localStorage.getItem('expertise')).length !== parseInt(document.querySelector('#expertise-number').innerHTML)) {
+          $('#error').fadeIn();
+        }
+      });
+      $('input[name=expertise]').on('change', function (event) {
+        if ($('input[name=expertise]:checked').length > parseInt(document.querySelector('#expertise-number').innerHTML)) {
+          event.target.checked = false;
+        }
+        if (event.target.checked) {
+          expertise.push(event.target.id);
+        } else {
+          if (expertise.indexOf(event.target.id) !== -1) {
+            expertise.splice(expertise.indexOf(event.target.id),1);
+          }
+        }
+        localStorage.setItem('expertise', JSON.stringify(expertise));
+        if (JSON.parse(localStorage.getItem('expertise')).length === parseInt(document.querySelector('#expertise-number').innerHTML)) {
+          $('#error').fadeOut();
+          sidenav ();
+          next.href = 'language.php'
+          nextArrow ();
+        } else {
+          sidenav ();
+          next.removeAttribute('href');
+          nextArrowRemove ();
+        }
+      });
+    }
 
 // if locked, can't access, disable link.
 // progress & locks on homepage.

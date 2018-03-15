@@ -304,6 +304,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (parseInt(JSON.parse(localStorage.getItem('level'))) < 3) {
         localStorage.setItem('subclass', JSON.stringify('n/a'));
       }
+      if (JSON.parse(localStorage.getItem('class')) === 'rogue' && parseInt(JSON.parse(localStorage.getItem('level'))) < 6) {
+        if (JSON.parse(localStorage.getItem('expertise')).length > 2) {
+          localStorage.removeItem('expertise');
+        }
+      }
     });
   }
 
@@ -349,6 +354,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.removeItem('artisan');
         localStorage.removeItem('gaming');
         localStorage.removeItem('music');
+        localStorage.removeItem('expertise');
         $('#error').fadeOut();
         sidenav ();
         nextArrow ();
@@ -765,6 +771,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('#tool-none').classList.remove('hide');
     }
     $('#instructions').fadeIn();
+    tool = JSON.parse(localStorage.getItem('tool')) || [];
     for (var i = 0; i < document.querySelectorAll('input[name=tool]:checked').length; i++) {
       tool.push(document.querySelectorAll('input[name=tool]:checked')[i].id);
       localStorage.setItem('tool', JSON.stringify(tool));
@@ -794,9 +801,10 @@ document.addEventListener('DOMContentLoaded', function () {
       $('#error').fadeOut();
       sidenav ();
       if (JSON.parse(localStorage.getItem('class')) === 'rogue') {
-        next.href = 'expertise.php'
+        next.href = 'expertise.php';
       } else {
-        next.href = 'language.php'
+        localStorage.setItem('expertise', JSON.stringify(expertise));
+        next.href = 'language.php';
       }
       nextArrow ();
     } else {
@@ -859,9 +867,10 @@ document.addEventListener('DOMContentLoaded', function () {
         $('#error').fadeOut();
         sidenav ();
         if (JSON.parse(localStorage.getItem('class')) === 'rogue') {
-          next.href = 'expertise.php'
+          next.href = 'expertise.php';
         } else {
-          next.href = 'language.php'
+          localStorage.setItem('expertise', JSON.stringify(expertise));
+          next.href = 'language.php';
         }
         nextArrow ();
       } else {

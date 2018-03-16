@@ -7419,11 +7419,79 @@ section#character-options div#character-content {
         section#character-options div#character-content div.content-box div#character-expertise .columns .column.is-small,
         section#character-options div#character-content div.content-box div#character-language .columns .column.is-small {
           padding: .15rem 1rem; }
-      section#character-options div#character-content div.content-box div#character-skill label,
-      section#character-options div#character-content div.content-box div#character-tool label,
-      section#character-options div#character-content div.content-box div#character-expertise label,
-      section#character-options div#character-content div.content-box div#character-language label {
-        transition: all 300ms ease; }
+    section#character-options div#character-content div.content-box div#character-abilities {
+      color: #363636; }
+      section#character-options div#character-content div.content-box div#character-abilities .columns {
+        align-items: center;
+        text-align: center; }
+      section#character-options div#character-content div.content-box div#character-abilities input {
+        text-align: center; }
+      section#character-options div#character-content div.content-box div#character-abilities .title {
+        color: #363636; }
+      section#character-options div#character-content div.content-box div#character-abilities #legend {
+        color: #7a7a7a;
+        font-size: .8rem;
+        text-transform: uppercase; }
+      section#character-options div#character-content div.content-box div#character-abilities span {
+        font-size: 1.2rem; }
+      section#character-options div#character-content div.content-box div#character-abilities span[data-ability='score'] {
+        background-color: #ebe5f1;
+        border-radius: 1rem;
+        display: block;
+        padding: .5rem; }
+      section#character-options div#character-content div.content-box div#character-abilities span[data-ability='mod'] {
+        background-color: #e0fae9;
+        border-radius: 1rem;
+        display: block;
+        padding: .5rem; }
+      section#character-options div#character-content div.content-box div#character-abilities #cost {
+        color: #7a7a7a;
+        font-size: .8rem;
+        justify-content: flex-end;
+        text-transform: uppercase; }
+        section#character-options div#character-content div.content-box div#character-abilities #cost .column:first-child {
+          text-align: right; }
+        section#character-options div#character-content div.content-box div#character-abilities #cost #points {
+          color: #ff3860; }
+    section#character-options div#character-content div.content-box div#character-summary .card {
+      margin-bottom: 1rem; }
+    section#character-options div#character-content div.content-box div#character-summary .title {
+      color: #363636;
+      font-size: 3rem; }
+    section#character-options div#character-content div.content-box div#character-summary .subtitle {
+      color: #7a7a7a;
+      font-size: .7rem;
+      margin-bottom: .5rem;
+      text-transform: uppercase; }
+    section#character-options div#character-content div.content-box div#character-summary .abilities .card-content {
+      padding: .25rem .25rem .5rem; }
+      section#character-options div#character-content div.content-box div#character-summary .abilities .card-content .subtitle {
+        letter-spacing: -.5px;
+        margin-bottom: 1.75rem; }
+    section#character-options div#character-content div.content-box div#character-summary .card.horizontal footer {
+      border-top: 0; }
+      section#character-options div#character-content div.content-box div#character-summary .card.horizontal footer p:first-child {
+        background-color: #363636;
+        color: white;
+        flex-grow: 0;
+        padding: .75rem 1rem; }
+    section#character-options div#character-content div.content-box div#character-summary .card.skills {
+      padding: 1rem; }
+      section#character-options div#character-content div.content-box div#character-summary .card.skills .field {
+        margin: .25rem 0;
+        pointer-events: none; }
+      section#character-options div#character-content div.content-box div#character-summary .card.skills .blank {
+        background-color: #dbdbdb;
+        border-radius: 2px;
+        display: inline-block;
+        margin: 1px 6px 0 3px;
+        padding: 3px 9px; }
+    section#character-options div#character-content div.content-box div#character-summary .card.stacked p {
+      display: block; }
+      section#character-options div#character-content div.content-box div#character-summary .card.stacked p span {
+        display: block; }
+    section#character-options div#character-content div.content-box div#character-summary .card.main .card-header-title:last-child {
+      justify-content: flex-end; }
   section#character-options div#character-content div.content-links {
     margin-left: -3px;
     padding-left: 0;
@@ -7438,7 +7506,7 @@ section#character-options div#character-content {
         section#character-options div#character-content div.content-links li.is-active a {
           background-color: rgba(121, 84, 156, 0.3);
           border-radius: 0 2px 2px 0; }
-      section#character-options div#character-content div.content-links li#nav-feats, section#character-options div#character-content div.content-links li#nav-spells {
+      section#character-options div#character-content div.content-links li#nav-hp, section#character-options div#character-content div.content-links li#nav-feats, section#character-options div#character-content div.content-links li#nav-spells {
         color: #79549c; }
     section#character-options div#character-content div.content-links a:hover {
       background-color: transparent;

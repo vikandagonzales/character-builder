@@ -13,7 +13,7 @@
           <h1 class="subtitle has-text-centered">
             Click on the cards below to start creating your character.
           </h1>
-          <progress class="progress is-primary" value="0" max="100"></progress>
+          <progress class="progress is-primary" value="30" max="100">30%</progress>
           <div class="button-set has-text-centered">
             <a class="button is-medium is-static">
               <span class="icon">
@@ -27,7 +27,7 @@
               </span>
               <span class="is-hidden-mobile">Export PDF</span>
             </a>
-            <a class="button is-medium is-primary" id="clear">
+            <a class="button is-medium is-primary" href="#">
               <span class="icon">
                 <i class="fas fa-file"></i>
               </span>
@@ -41,6 +41,11 @@
         <div class="column is-4" id="nav-race">
           <a href="race.php">
             <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
               <div class="card-content">
                 <div class="content is-clearfix">
                   <p class="is-pulled-left">
@@ -64,6 +69,11 @@
         <div class="column is-4" id="nav-level">
           <a href="level.php">
             <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
               <div class="card-content">
                 <div class="content is-clearfix">
                   <p class="is-pulled-left">
@@ -87,6 +97,11 @@
         <div class="column is-4" id="nav-class">
           <a href="class.php">
             <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
               <div class="card-content">
                 <div class="content is-clearfix">
                   <p class="is-pulled-left">
@@ -113,6 +128,11 @@
         <div class="column is-4" id="nav-alignment">
           <a href="alignment.php">
             <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
               <div class="card-content">
                 <div class="content is-clearfix">
                   <p class="is-pulled-left">
@@ -136,6 +156,11 @@
         <div class="column is-4" id="nav-background">
           <a href="background.php">
             <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
               <div class="card-content">
                 <div class="content is-clearfix">
                   <p class="is-pulled-left">
@@ -159,6 +184,11 @@
         <div class="column is-4" id="nav-proficiencies">
           <a href="profiencies.php">
             <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
               <div class="card-content">
                 <div class="content is-clearfix">
                   <p class="is-pulled-left">
@@ -185,6 +215,11 @@
         <div class="column is-4" id="nav-abilities">
           <a href="abilities.php">
             <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
               <div class="card-content">
                 <div class="content is-clearfix">
                   <p class="is-pulled-left">
@@ -211,6 +246,11 @@
         <div class="column is-4" id="nav-name">
           <a href="name.php">
             <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
               <div class="card-content">
                 <div class="content is-clearfix">
                   <p class="is-pulled-left">
@@ -234,6 +274,11 @@
         <div class="column is-4" id="nav-summary">
           <a href="summary.php">
             <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
               <div class="card-content">
                 <div class="content is-clearfix">
                   <p class="is-pulled-left">
@@ -241,8 +286,11 @@
                     Summary
                   </p>
                   <p class="is-pulled-right">
-                    <span class="lock" data-id="unlock">
-                      <i class="fas fa-lock-open"></i>
+                    <span class="lock" data-id="times">
+                      <i class="fas fa-times"></i>
+                    </span>
+                    <span class="lock" data-id="check">
+                      <i class="fas fa-check"></i>
                     </span>
                     <span class="lock" data-id="lock">
                       <i class="fas fa-lock"></i>

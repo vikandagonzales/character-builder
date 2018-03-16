@@ -80,7 +80,7 @@
         </a>
       </li>
       <li id="nav-abilities">
-        <a>
+        <a href="abilities.php">
           <span class="icon lnr-chart-bars"></span>
           <span>Abilities</span>
           <span class="lock" data-id="times">
@@ -94,7 +94,7 @@
           </span>
         </a>
       </li>
-      <li id="nav-hp">
+      <li id="nav-hp" class="disable">
         <a>
           <span class="icon lnr-heart-pulse"></span>
           <span>Hit Points</span>
@@ -140,7 +140,7 @@
         </a>
       </li>
       <li id="nav-name">
-        <a>
+        <a href="name.php">
           <span class="icon lnr-portrait"></span>
           <span>Name</span>
           <span class="lock" data-id="times">
@@ -155,14 +155,11 @@
         </a>
       </li>
       <li id="nav-summary">
-        <a>
+        <a href="summary.php">
           <span class="icon lnr-document"></span>
           <span>Summary</span>
-          <span class="lock" data-id="times">
-            <i class="fas fa-times"></i>
-          </span>
-          <span class="lock" data-id="check">
-            <i class="fas fa-check"></i>
+          <span class="lock" data-id="unlock">
+            <i class="fas fa-lock-open"></i>
           </span>
           <span class="lock" data-id="lock">
             <i class="fas fa-lock"></i>

@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/linearicons.css">
     <link rel="stylesheet" href="css/customicons.css">
     <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Montserrat:800" rel="stylesheet">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script defer src="lib/main.js"></script>
@@ -28,5 +29,8 @@
     <script defer src="lib/tool.js"></script>
     <script defer src="lib/expertise.js"></script>
     <script defer src="lib/language.js"></script>
+    <script defer src="lib/abilities.js"></script>
+    <script defer src="lib/name.js"></script>
+    <script defer src="lib/summary.js"></script>
   </head>
   <body>

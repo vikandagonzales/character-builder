@@ -2,11 +2,7 @@ if (document.querySelector('#character-subclass') !== null) {
   document.querySelector('#nav-class').classList.add('is-active');
   $('#back').removeClass('hide');
   $('#next').removeClass('hide');
-  if (JSON.parse(localStorage.getItem('subrace')) === 'n/a' || JSON.parse(localStorage.getItem('subrace')) === null) {
-    back.href = 'race.php';
-  } else {
-    back.href = 'subrace.php';
-  }
+  back.href = 'class.php';
   switch (JSON.parse(localStorage.getItem('class'))) {
     case 'druid':
       document.querySelector('div[data-subclass=land]').classList.remove('hide');

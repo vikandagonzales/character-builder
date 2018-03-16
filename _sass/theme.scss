@@ -11,6 +11,11 @@ a {
   pointer-events: none;
 }
 
+.image img {
+  object-fit: cover;
+  object-position: top;
+}
+
 div.button-set {
   padding: 2rem;
 
@@ -182,7 +187,7 @@ section#character-options {
               display: block;
               margin-bottom: 1rem;
               position: absolute;
-              text-shadow: 0 0 4px rgba($black, 0.2);
+              text-shadow: 0 0 4px rgba($black, 0.4);
               width: 100%;
               z-index: 1;
             }

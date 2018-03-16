@@ -59,7 +59,7 @@
                     <label>
                       <input type="radio" name="subclass" value="land">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/land.jpg" alt="Circle of the Land">
                         <h1 class="title is-4 has-text-centered">Circle of the Land</h1>
                       </figure>
                     </label>
@@ -68,7 +68,7 @@
                     <label>
                       <input type="radio" name="subclass" value="moon">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/moon.jpg" alt="Circle of the Moon">
                         <h1 class="title is-4 has-text-centered">Circle of the Moon</h1>
                       </figure>
                     </label>
@@ -77,7 +77,7 @@
                     <label>
                       <input type="radio" name="subclass" value="devotion">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/devotion.jpg" alt="Oath of Devotion">
                         <h1 class="title is-4 has-text-centered">Oath of Devotion</h1>
                       </figure>
                     </label>
@@ -86,7 +86,7 @@
                     <label>
                       <input type="radio" name="subclass" value="ancients">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/ancients.jpg" alt="Oath of the Ancients">
                         <h1 class="title is-4 has-text-centered">Oath of the Ancients</h1>
                       </figure>
                     </label>
@@ -95,7 +95,7 @@
                     <label>
                       <input type="radio" name="subclass" value="vengeance">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/vengeance.jpg" alt="Oath of Vengeance">
                         <h1 class="title is-4 has-text-centered">Oath of Vengeance</h1>
                       </figure>
                     </label>
@@ -104,7 +104,7 @@
                     <label>
                       <input type="radio" name="subclass" value="thief">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/thief.jpg" alt="Thief">
                         <h1 class="title is-4 has-text-centered">Thief</h1>
                       </figure>
                     </label>
@@ -113,7 +113,7 @@
                     <label>
                       <input type="radio" name="subclass" value="assassin">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/assassin.jpg" alt="Assassin">
                         <h1 class="title is-4 has-text-centered">Assassin</h1>
                       </figure>
                     </label>
@@ -122,7 +122,7 @@
                     <label>
                       <input type="radio" name="subclass" value="arcane-trickster">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/arcane-trickster.png" alt="Arcane Trickster">
                         <h1 class="title is-4 has-text-centered">Arcane Trickster</h1>
                       </figure>
                     </label>

@@ -59,7 +59,7 @@
                     <label>
                       <input type="radio" name="subrace" value="hill">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/hill.jpg" alt="Hill Dwarf">
                         <h1 class="title is-4 has-text-centered">Hill</h1>
                       </figure>
                     </label>
@@ -68,7 +68,7 @@
                     <label>
                       <input type="radio" name="subrace" value="mountain">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/mountain.jpg" alt="Mountain Dwarf">
                         <h1 class="title is-4 has-text-centered">Mountain</h1>
                       </figure>
                     </label>
@@ -77,7 +77,7 @@
                     <label>
                       <input type="radio" name="subrace" value="high">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/high.jpg" alt="High Elf">
                         <h1 class="title is-4 has-text-centered">High</h1>
                       </figure>
                     </label>
@@ -86,7 +86,7 @@
                     <label>
                       <input type="radio" name="subrace" value="wood">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/wood.jpg" alt="Wood Elf">
                         <h1 class="title is-4 has-text-centered">Wood</h1>
                       </figure>
                     </label>

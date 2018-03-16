@@ -58,7 +58,7 @@
                     <label>
                       <input type="radio" name="class" value="druid">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/druid.jpg" alt="Druid">
                         <h1 class="title is-4 has-text-centered">Druid</h1>
                       </figure>
                     </label>
@@ -67,7 +67,7 @@
                     <label>
                       <input type="radio" name="class" value="paladin">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/paladin.jpg" alt="Paladin">
                         <h1 class="title is-4 has-text-centered">Paladin</h1>
                       </figure>
                     </label>
@@ -76,7 +76,7 @@
                     <label>
                       <input type="radio" name="class" value="rogue">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/rogue.jpg" alt="Rogue">
                         <h1 class="title is-4 has-text-centered">Rogue</h1>
                       </figure>
                     </label>

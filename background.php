@@ -58,7 +58,7 @@
                     <label>
                       <input type="radio" name="background" value="acolyte">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/acolyte.jpg" alt="Acolyte">
                         <h1 class="title is-4 has-text-centered">Acolyte</h1>
                       </figure>
                     </label>
@@ -67,7 +67,7 @@
                     <label>
                       <input type="radio" name="background" value="charlatan">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/charlatan.jpg" alt="Charlatan">
                         <h1 class="title is-4 has-text-centered">Charlatan</h1>
                       </figure>
                     </label>
@@ -76,7 +76,7 @@
                     <label>
                       <input type="radio" name="background" value="criminal">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/criminal.jpg" alt="Criminal">
                         <h1 class="title is-4 has-text-centered">Criminal</h1>
                       </figure>
                     </label>

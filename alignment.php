@@ -58,7 +58,7 @@
                     <label>
                       <input type="radio" name="alignment" value="lawful-good">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/lawful-good.jpeg" alt="Lawful Good">
                         <h1 class="title is-4 has-text-centered">Lawful Good</h1>
                       </figure>
                     </label>
@@ -67,7 +67,7 @@
                     <label>
                       <input type="radio" name="alignment" value="neutral-good">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/neutral-good.jpg" alt="Neutral Good">
                         <h1 class="title is-4 has-text-centered">Neutral Good</h1>
                       </figure>
                     </label>
@@ -76,7 +76,7 @@
                     <label>
                       <input type="radio" name="alignment" value="chaotic-good">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/chaotic-good.jpg" alt="Chaotic Good">
                         <h1 class="title is-4 has-text-centered">Chaotic Good</h1>
                       </figure>
                     </label>
@@ -85,7 +85,7 @@
                     <label>
                       <input type="radio" name="alignment" value="lawful-neutral">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/lawful-neutral.jpg" alt="Lawful Neutral">
                         <h1 class="title is-4 has-text-centered">Lawful Neutral</h1>
                       </figure>
                     </label>
@@ -94,7 +94,7 @@
                     <label>
                       <input type="radio" name="alignment" value="neutral">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/neutral.jpg" alt="Neutral">
                         <h1 class="title is-4 has-text-centered">Neutral</h1>
                       </figure>
                     </label>
@@ -103,7 +103,7 @@
                     <label>
                       <input type="radio" name="alignment" value="chaotic-neutral">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/chaotic-neutral.jpg" alt="Chaotic Neutral">
                         <h1 class="title is-4 has-text-centered">Chaotic Neutral</h1>
                       </figure>
                     </label>
@@ -112,7 +112,7 @@
                     <label>
                       <input type="radio" name="alignment" value="lawful-evil">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/lawful-evil.jpg" alt="Lawful Evil">
                         <h1 class="title is-4 has-text-centered">Lawful Evil</h1>
                       </figure>
                     </label>
@@ -121,7 +121,7 @@
                     <label>
                       <input type="radio" name="alignment" value="neutral-evil">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/neutral-evil.jpg" alt="Neutral Evil">
                         <h1 class="title is-4 has-text-centered">Neutral Evil</h1>
                       </figure>
                     </label>
@@ -130,7 +130,7 @@
                     <label>
                       <input type="radio" name="alignment" value="chaotic-evil">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/chaotic-evil.jpg" alt="Chaotic Evil">
                         <h1 class="title is-4 has-text-centered">Chaotic Evil</h1>
                       </figure>
                     </label>

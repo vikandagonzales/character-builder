@@ -58,7 +58,7 @@
                     <label>
                       <input type="radio" name="race" value="dwarf">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/dwarf.jpg" alt="Dwarf">
                         <h1 class="title is-4 has-text-centered">Dwarf</h1>
                       </figure>
                     </label>
@@ -67,7 +67,7 @@
                     <label>
                       <input type="radio" name="race" value="elf">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/elf.jpg" alt="Elf">
                         <h1 class="title is-4 has-text-centered">Elf</h1>
                       </figure>
                     </label>
@@ -76,7 +76,7 @@
                     <label>
                       <input type="radio" name="race" value="human">
                       <figure class="image is-square">
-                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        <img src="assets/human.jpg" alt="Human">
                         <h1 class="title is-4 has-text-centered">Human</h1>
                       </figure>
                     </label>

@@ -7266,6 +7266,10 @@ a {
 .disable {
   pointer-events: none; }
 
+.image img {
+  object-fit: cover;
+  object-position: top; }
+
 div.button-set {
   padding: 2rem; }
   div.button-set a.button {
@@ -7368,7 +7372,7 @@ section#character-options div#character-content {
             display: block;
             margin-bottom: 1rem;
             position: absolute;
-            text-shadow: 0 0 4px rgba(10, 10, 10, 0.2);
+            text-shadow: 0 0 4px rgba(10, 10, 10, 0.4);
             width: 100%;
             z-index: 1; }
           section#character-options div#character-content div.content-box div.card-choice-container div.card-choice label > input + figure img {

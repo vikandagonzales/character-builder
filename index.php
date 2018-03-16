@@ -157,7 +157,7 @@
         </div>
 
         <div class="column is-4" id="nav-proficiencies">
-          <a href="profiencies.php">
+          <a href="proficiencies.php">
             <div class="card">
               <div class="card-content">
                 <div class="content is-clearfix">

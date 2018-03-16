@@ -3,9 +3,13 @@ if (document.querySelector('#character-skill') !== null) {
   $('#back').removeClass('hide');
   $('#next').removeClass('hide');
   back.href = 'background.php';
+  document.querySelector('#skill-number').innerHTML = skillNumber;
+  if (skillGiven) {
+    document.querySelector('#skill-addition').classList.remove('hide');
+    document.querySelector('#skill-given').innerHTML = skillGiven;
+  }
   switch (JSON.parse(localStorage.getItem('class'))) {
     case 'druid':
-      document.querySelector('#skill-number').innerHTML = '2';
       document.querySelector('div[data-skill=arcana]').classList.remove('hide');
       document.querySelector('div[data-skill=animal-handling]').classList.remove('hide');
       document.querySelector('div[data-skill=insight]').classList.remove('hide');
@@ -16,7 +20,6 @@ if (document.querySelector('#character-skill') !== null) {
       document.querySelector('div[data-skill=survival]').classList.remove('hide');
       break;
     case 'paladin':
-      document.querySelector('#skill-number').innerHTML = '2';
       document.querySelector('div[data-skill=athletics]').classList.remove('hide');
       document.querySelector('div[data-skill=insight]').classList.remove('hide');
       document.querySelector('div[data-skill=intimidation]').classList.remove('hide');
@@ -25,7 +28,6 @@ if (document.querySelector('#character-skill') !== null) {
       document.querySelector('div[data-skill=religion]').classList.remove('hide');
       break;
     case 'rogue':
-      document.querySelector('#skill-number').innerHTML = '4';
       document.querySelector('div[data-skill=acrobatics]').classList.remove('hide');
       document.querySelector('div[data-skill=athletics]').classList.remove('hide');
       document.querySelector('div[data-skill=deception]').classList.remove('hide');
@@ -42,12 +44,6 @@ if (document.querySelector('#character-skill') !== null) {
   }
   switch (JSON.parse(localStorage.getItem('background'))) {
     case 'acolyte':
-      document.querySelector('#skill-addition').classList.remove('hide');
-      if (document.querySelector('#skill-given').innerHTML === '') {
-        document.querySelector('#skill-given').innerHTML = 2;
-      } else {
-        document.querySelector('#skill-given').innerHTML = parseInt(document.querySelector('#skill-given').innerHTML) + 2;
-      }
       document.querySelector('div[data-skill=insight]').classList.remove('hide');
       document.querySelector('#insight').classList.add('has-background-color');
       document.querySelector('#insight').classList.add('is-primary');
@@ -60,12 +56,6 @@ if (document.querySelector('#character-skill') !== null) {
       document.querySelector('#religion').checked = 'checked';
       break;
     case 'charlatan':
-      document.querySelector('#skill-addition').classList.remove('hide');
-      if (document.querySelector('#skill-given').innerHTML === '') {
-        document.querySelector('#skill-given').innerHTML = 2;
-      } else {
-        document.querySelector('#skill-given').innerHTML = parseInt(document.querySelector('#skill-given').innerHTML) + 2;
-      }
       document.querySelector('div[data-skill=deception]').classList.remove('hide');
       document.querySelector('#deception').classList.add('has-background-color');
       document.querySelector('#deception').classList.add('is-primary');
@@ -78,12 +68,6 @@ if (document.querySelector('#character-skill') !== null) {
       document.querySelector('#sleight-of-hand').checked = 'checked';
       break;
     case 'criminal':
-      document.querySelector('#skill-addition').classList.remove('hide');
-      if (document.querySelector('#skill-given').innerHTML === '') {
-        document.querySelector('#skill-given').innerHTML = 2;
-      } else {
-        document.querySelector('#skill-given').innerHTML = parseInt(document.querySelector('#skill-given').innerHTML) + 2;
-      }
       document.querySelector('div[data-skill=deception]').classList.remove('hide');
       document.querySelector('#deception').classList.add('has-background-color');
       document.querySelector('#deception').classList.add('is-primary');
@@ -99,12 +83,6 @@ if (document.querySelector('#character-skill') !== null) {
   }
   switch (JSON.parse(localStorage.getItem('race'))) {
     case 'elf':
-      document.querySelector('#skill-addition').classList.remove('hide');
-      if (document.querySelector('#skill-given').innerHTML === '') {
-        document.querySelector('#skill-given').innerHTML = 1;
-      } else {
-        document.querySelector('#skill-given').innerHTML = parseInt(document.querySelector('#skill-given').innerHTML) + 1;
-      }
       document.querySelector('div[data-skill=perception]').classList.remove('hide');
       document.querySelector('#perception').classList.add('has-background-color');
       document.querySelector('#perception').classList.add('is-primary');
@@ -126,7 +104,6 @@ if (document.querySelector('#character-skill') !== null) {
       inputs[i].checked = true;
     }
   }
-  skillLimit = (parseInt(document.querySelector('#skill-number').innerHTML) || 0) + (parseInt(document.querySelector('#skill-given').innerHTML) || 0);
   localStorage.setItem('skill', JSON.stringify(skill));
   if (JSON.parse(localStorage.getItem('skill')).length === skillLimit) {
     $('#error').fadeOut();

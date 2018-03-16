@@ -3,13 +3,9 @@ if (document.querySelector('#character-expertise') !== null) {
   $('#back').removeClass('hide');
   $('#next').removeClass('hide');
   back.href = 'tool.php';
+  document.querySelector('#expertise-number').innerHTML = expertiseLimit;
   switch (JSON.parse(localStorage.getItem('class'))) {
     case 'rogue':
-      if (parseInt(JSON.parse(localStorage.getItem('level'))) >= 6) {
-        document.querySelector('#expertise-number').innerHTML = '4';
-      } else {
-        document.querySelector('#expertise-number').innerHTML = '2';
-      }
       for (var i = 0; i < document.querySelectorAll('[data-expertise]').length; i++) {
         if ((JSON.parse(localStorage.getItem('skill'))).includes(document.querySelectorAll('[data-expertise]')[i].dataset.expertise) || (JSON.parse(localStorage.getItem('tool'))).includes(document.querySelectorAll('[data-expertise]')[i].dataset.expertise)) {
           document.querySelectorAll('[data-expertise]')[i].classList.remove('hide');
@@ -26,7 +22,6 @@ if (document.querySelector('#character-expertise') !== null) {
     }
   }
   localStorage.setItem('expertise', JSON.stringify(expertise));
-  expertiseLimit = parseInt(document.querySelector('#expertise-number').innerHTML) || 0;
   if (JSON.parse(localStorage.getItem('expertise')).length === expertiseLimit) {
     $('#error').fadeOut();
     sidenav ();

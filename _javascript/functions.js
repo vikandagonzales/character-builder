@@ -49,9 +49,22 @@ function sidenav () {
     JSON.parse(localStorage.getItem('background')) !== null
   ) {
     $('#nav-proficiencies').removeClass('disable');
-    $('#nav-proficiencies span[data-id=times]').fadeIn();
-    $('#nav-proficiencies span[data-id=check]').hide();
     $('#nav-proficiencies span[data-id=lock]').hide();
+    if (
+      (JSON.parse(localStorage.getItem('skill')).length > 0 || skillLimit === 0) &&
+      (JSON.parse(localStorage.getItem('tool')).length > 0 || toolLimit === 0) &&
+      (JSON.parse(localStorage.getItem('artisan')).length === artisanLimit) &&
+      (JSON.parse(localStorage.getItem('gaming')).length === gamingLimit) &&
+      (JSON.parse(localStorage.getItem('music')).length === musicLimit) &&
+      (JSON.parse(localStorage.getItem('expertise')).length === expertiseLimit) &&
+      (JSON.parse(localStorage.getItem('language')).length > 0 || languageLimit === 0)
+    ) {
+      $('#nav-proficiencies span[data-id=times]').hide();
+      $('#nav-proficiencies span[data-id=check]').fadeIn();
+    } else {
+      $('#nav-proficiencies span[data-id=times]').fadeIn();
+      $('#nav-proficiencies span[data-id=check]').hide();
+    }
   } else {
     $('#nav-proficiencies span[data-id=times]').hide();
     $('#nav-proficiencies span[data-id=check]').hide();

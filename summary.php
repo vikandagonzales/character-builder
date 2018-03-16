@@ -298,32 +298,32 @@
                     <div class="card main">
                       <header class="card-header">
                         <p class="card-header-title">
-                          <span id="race">
+                          <span id="race" class="capitalize">
                             Race
                           </span>
                         </p>
                         <p class="card-header-title">
-                          <span id="level">
+                          <span id="level" class="capitalize">
                             Level
                           </span>
                         </p>
                       </header>
                       <div class="card-content has-text-centered">
-                        <p class="title" id="class">
+                        <p id="class" class="title capitalize">
                           Class
                         </p>
-                        <p class="subtitle" id="subclass">
+                        <p id="subclass" class="subtitle capitalize">
                           Subclass
                         </p>
                       </div>
                       <footer class="card-footer">
                         <p class="card-footer-item">
-                          <span id="background">
+                          <span id="background" class="capitalize">
                             Background
                           </span>
                         </p>
                         <p class="card-footer-item">
-                          <span id="alignment">
+                          <span id="alignment" class="capitalize">
                             Alignment
                           </span>
                         </p>
@@ -332,7 +332,7 @@
                     <div class="card stacked has-text-centered">
                       <footer class="card-footer">
                         <p class="card-footer-item">
-                          <span class="title" id="ac">
+                          <span id="ac" class="title">
                             0
                           </span>
                           <span class="subtitle">
@@ -340,7 +340,7 @@
                           </span>
                         </p>
                         <p class="card-footer-item">
-                          <span class="title" id="initiative">
+                          <span id="initiative" class="title">
                             0
                           </span>
                           <span class="subtitle">
@@ -348,7 +348,7 @@
                           </span>
                         </p>
                         <p class="card-footer-item">
-                          <span class="title" id="speed">
+                          <span id="speed" class="title">
                             0
                           </span>
                           <span class="subtitle">
@@ -360,7 +360,7 @@
                     <div class="card stacked has-text-centered">
                       <footer class="card-footer">
                         <p class="card-footer-item">
-                          <span class="title" id="hp">
+                          <span id="hp" class="title">
                             0
                           </span>
                           <span class="subtitle">
@@ -368,7 +368,7 @@
                           </span>
                         </p>
                         <p class="card-footer-item">
-                          <span class="title" id="hd">
+                          <span id="hd" class="title">
                             0
                           </span>
                           <span class="subtitle">

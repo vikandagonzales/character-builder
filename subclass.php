@@ -57,7 +57,7 @@
                 <div class="columns card-choice-container">
                   <div class="column is-5 card-choice hide" data-subclass="land">
                     <label>
-                      <input type="radio" name="subclass" value="land">
+                      <input type="radio" name="subclass" value="circle-of-the-land">
                       <figure class="image is-square">
                         <img src="assets/land.jpg" alt="Circle of the Land">
                         <h1 class="title is-4 has-text-centered">Circle of the Land</h1>
@@ -66,7 +66,7 @@
                   </div>
                   <div class="column is-5 card-choice hide" data-subclass="moon">
                     <label>
-                      <input type="radio" name="subclass" value="moon">
+                      <input type="radio" name="subclass" value="circle-of-the-moon">
                       <figure class="image is-square">
                         <img src="assets/moon.jpg" alt="Circle of the Moon">
                         <h1 class="title is-4 has-text-centered">Circle of the Moon</h1>
@@ -75,7 +75,7 @@
                   </div>
                   <div class="column is-4 card-choice hide" data-subclass="devotion">
                     <label>
-                      <input type="radio" name="subclass" value="devotion">
+                      <input type="radio" name="subclass" value="oath-of-devotion">
                       <figure class="image is-square">
                         <img src="assets/devotion.jpg" alt="Oath of Devotion">
                         <h1 class="title is-4 has-text-centered">Oath of Devotion</h1>
@@ -84,7 +84,7 @@
                   </div>
                   <div class="column is-4 card-choice hide" data-subclass="ancients">
                     <label>
-                      <input type="radio" name="subclass" value="ancients">
+                      <input type="radio" name="subclass" value="oath-of-the-ancients">
                       <figure class="image is-square">
                         <img src="assets/ancients.jpg" alt="Oath of the Ancients">
                         <h1 class="title is-4 has-text-centered">Oath of the Ancients</h1>
@@ -93,7 +93,7 @@
                   </div>
                   <div class="column is-4 card-choice hide" data-subclass="vengeance">
                     <label>
-                      <input type="radio" name="subclass" value="vengeance">
+                      <input type="radio" name="subclass" value="oath-of-vengeance">
                       <figure class="image is-square">
                         <img src="assets/vengeance.jpg" alt="Oath of Vengeance">
                         <h1 class="title is-4 has-text-centered">Oath of Vengeance</h1>

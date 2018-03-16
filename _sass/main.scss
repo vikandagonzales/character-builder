@@ -11,7 +11,7 @@ $secondary: $sphere;
 $secondary-invert: $white;
 $link: $secondary;
 
-//$family-sans-serif: "Helvetica", "Arial", sans-serif;
+$family-sans-serif: 'Work Sans', sans-serif;
 
 @import "../node_modules/bulma/bulma";
 @import '../node_modules/bulma-extensions/bulma-checkradio/dist/bulma-checkradio';

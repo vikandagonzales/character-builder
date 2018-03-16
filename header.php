@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/linearicons.css">
     <link rel="stylesheet" href="css/customicons.css">
-    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Montserrat:800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -102,7 +102,7 @@ button,
 input,
 select,
 textarea {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "Work Sans", sans-serif; }
 
 code,
 pre {
@@ -7258,13 +7258,17 @@ label.panel-block {
 
 a {
   color: #79549c;
-  transition: all 300ms ease; }
+  transition: all 300ms ease;
+  user-select: none; }
 
 .hide {
   display: none; }
 
 .disable {
   pointer-events: none; }
+
+.capitalize {
+  text-transform: capitalize; }
 
 .image img {
   object-fit: cover;
@@ -7371,6 +7375,7 @@ section#character-options div#character-content {
             bottom: 0;
             display: block;
             margin-bottom: 1rem;
+            padding: 0 1rem;
             position: absolute;
             text-shadow: 0 0 4px rgba(10, 10, 10, 0.4);
             width: 100%;
@@ -7390,6 +7395,8 @@ section#character-options div#character-content {
             opacity: 1; }
     section#character-options div#character-content div.content-box div#character-level input {
       font-size: 5rem;
+      text-align: center; }
+    section#character-options div#character-content div.content-box div#character-name input {
       text-align: center; }
     section#character-options div#character-content div.content-box div#character-skill,
     section#character-options div#character-content div.content-box div#character-tool,
@@ -7478,18 +7485,23 @@ section#character-options div#character-content {
         background-color: #363636;
         color: white;
         flex-grow: 0;
-        padding: .75rem 1rem; }
+        padding: 0 .85rem; }
     section#character-options div#character-content div.content-box div#character-summary .card.skills {
       padding: 1rem; }
       section#character-options div#character-content div.content-box div#character-summary .card.skills .field {
         margin: .25rem 0;
         pointer-events: none; }
+      section#character-options div#character-content div.content-box div#character-summary .card.skills label {
+        margin: 0; }
       section#character-options div#character-content div.content-box div#character-summary .card.skills .blank {
         background-color: #dbdbdb;
         border-radius: 2px;
         display: inline-block;
-        margin: 1px 6px 0 3px;
-        padding: 3px 9px; }
+        margin: 0 6px 0 3px;
+        text-align: center;
+        width: 24px; }
+      section#character-options div#character-content div.content-box div#character-summary .card.skills ul li {
+        text-transform: capitalize; }
     section#character-options div#character-content div.content-box div#character-summary .card.stacked p {
       display: block; }
       section#character-options div#character-content div.content-box div#character-summary .card.stacked p span {

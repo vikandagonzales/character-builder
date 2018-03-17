@@ -1,5 +1,8 @@
 function sidenav () {
-  if (JSON.parse(localStorage.getItem('race')) !== null && JSON.parse(localStorage.getItem('subrace')) !== null) {
+  if (
+    JSON.parse(localStorage.getItem('race')) !== null &&
+    JSON.parse(localStorage.getItem('subrace')) !== null
+  ) {
     $('#nav-race span[data-id=times]').hide();
     $('#nav-race span[data-id=check]').fadeIn();
   } else {
@@ -10,7 +13,10 @@ function sidenav () {
     $('#nav-level span[data-id=times]').hide();
     $('#nav-level span[data-id=check]').fadeIn();
     $('#nav-class').removeClass('disable');
-    if (JSON.parse(localStorage.getItem('class')) !== null && JSON.parse(localStorage.getItem('subclass')) !== null) {
+    if (
+      JSON.parse(localStorage.getItem('class')) !== null &&
+      JSON.parse(localStorage.getItem('subclass')) !== null
+    ) {
       $('#nav-class span[data-id=times]').hide();
       $('#nav-class span[data-id=check]').fadeIn();
       $('#nav-class span[data-id=lock]').hide();
@@ -76,7 +82,10 @@ function sidenav () {
         if (JSON.parse(localStorage.getItem('points')) === 0) {
           $('#nav-abilities span[data-id=times]').hide();
           $('#nav-abilities span[data-id=check]').fadeIn();
-          if (JSON.parse(localStorage.getItem('name')) !== null && JSON.parse(localStorage.getItem('alignment')) !== null) {
+          if (
+            JSON.parse(localStorage.getItem('name')) !== null &&
+            JSON.parse(localStorage.getItem('alignment')) !== null
+          ) {
             $('#nav-summary').removeClass('disable');
             $('#nav-summary span[data-id=unlock]').fadeIn();
             $('#nav-summary span[data-id=lock]').hide();
@@ -147,7 +156,10 @@ if (document.querySelector('#clear')) {
 }
 
 function progress () {
-  if (JSON.parse(localStorage.getItem('race')) !== null && JSON.parse(localStorage.getItem('subrace')) !== null) {
+  if (
+    JSON.parse(localStorage.getItem('race')) !== null &&
+    JSON.parse(localStorage.getItem('subrace')) !== null
+  ) {
     completion.push('race');
   } else {
     if (completion.indexOf('race') !== -1) {
@@ -161,7 +173,10 @@ function progress () {
       completion.splice(completion.indexOf('level'),1);
     }
   }
-  if (JSON.parse(localStorage.getItem('class')) !== null && JSON.parse(localStorage.getItem('subclass')) !== null) {
+  if (
+    JSON.parse(localStorage.getItem('class')) !== null &&
+    JSON.parse(localStorage.getItem('subclass')) !== null
+  ) {
     completion.push('class');
   } else {
     if (completion.indexOf('class') !== -1) {
@@ -182,7 +197,15 @@ function progress () {
       completion.splice(completion.indexOf('background'),1);
     }
   }
-  if (JSON.parse(localStorage.getItem('skill')) !== null && JSON.parse(localStorage.getItem('tool')) !== null && JSON.parse(localStorage.getItem('artisan')) !== null && JSON.parse(localStorage.getItem('gaming')) !== null && JSON.parse(localStorage.getItem('music')) !== null && JSON.parse(localStorage.getItem('expertise')) !== null && JSON.parse(localStorage.getItem('language')) !== null) {
+  if (
+    JSON.parse(localStorage.getItem('skill')) !== null &&
+    JSON.parse(localStorage.getItem('tool')) !== null &&
+    JSON.parse(localStorage.getItem('artisan')) !== null &&
+    JSON.parse(localStorage.getItem('gaming')) !== null &&
+    JSON.parse(localStorage.getItem('music')) !== null &&
+    JSON.parse(localStorage.getItem('expertise')) !== null &&
+    JSON.parse(localStorage.getItem('language')) !== null
+  ) {
     completion.push('proficiencies');
   } else {
     if (completion.indexOf('proficiencies') !== -1) {

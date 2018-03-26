@@ -33,6 +33,7 @@ For now, a current working version is available [here](http://vikanda.net/charac
 ## Known Bugs
 
 - JS doesn't quite load correctly on Google Chrome but is fine in all other browsers. This needs to be investigated.
+- Not responsive yet! Sorry!
 - I'm on a mission to make this whole thing more data-driven, but I'll be doing a complete JS overhaul on another branch some other time.
 - The level field is great but isn't foolproof. Currently, you are unable to click in front of an entered number to add another number, even if the resulting level is valid, due to the logic of the JS.
 - There is a bug on the point-buy calculator where if you hold the up or down button, it is possible to go into a point deficit.

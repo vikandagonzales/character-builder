@@ -6,7 +6,7 @@
       </a>
       <a class="navbar-item underline" href="index.php">
         <span class="lnr-dagger"></span>
-        <span class="is-hidden-touch">Character Builder</a>
+        <span class="is-hidden-touch">Character Builder</span>
       </a>
       <div class="navbar-burger" data-target="navMenu">
         <span></span>

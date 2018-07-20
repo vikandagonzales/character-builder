@@ -1,6 +1,6 @@
 # Character Builder
 
->Currently a work in progress!
+>Currently a work in progress! Will be completely remade using React and Redux along with an Express.js backend and PostgreSQL database.
 
 #### Why did I decide to do this?
 - For those unfamiliar with D&D, starting it can be really intimidating! Have you seen how many books there are now?
